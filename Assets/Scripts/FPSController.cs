@@ -32,6 +32,14 @@ public class FPSController : MonoBehaviour
     [Header("Jump")]
     //fuerza con la que realizara el salto
     public float jumpForce = 4f;
+
+    [Header("Interact")]
+    //Disctancia maxima para interactuar
+    public float interactDistance = 2f;
+    //Referencia al script de los interactuables
+    private InteractableObjects currentInteractable;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,6 +75,10 @@ public class FPSController : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             Jump();
+        }
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            InteractWithObject();
         }
     }
 
@@ -131,6 +143,27 @@ public class FPSController : MonoBehaviour
         if (player.isGrounded)
         {
             verticalV = jumpForce;
+        }
+    }
+
+    private void InteractWithObject()
+    {
+        //Obterner la direccion en la que mira la camara
+        Vector3 cameraDirection = Camera.main.transform.forward;
+
+        RaycastHit hit;
+
+        // Realizar un raycast desde la posición del jugador en la dirección de la cámara
+        if (Physics.Raycast(transform.position,cameraDirection, out hit, interactDistance))
+        {
+            InteractableObjects objects = hit.collider.GetComponent<InteractableObjects>();
+            if(objects != null && objects.CompareTag("Interactable"))
+            {
+                currentInteractable = objects;
+                //Llama a metodo para interactua con el objeto
+                currentInteractable.Interact();
+
+            }
         }
     }
 }
