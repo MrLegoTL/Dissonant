@@ -15,6 +15,7 @@ public class InteractableObjects : MonoBehaviour
         {
             //Cambia el estado del parametro  booleano en el animator para abrir o cerrar la puerta
             anim.SetBool("character_nearby", !anim.GetBool("character_nearby"));
+            anim.SetBool("CapsuleOpen", !anim.GetBool("CapsuleOpen"));
 
         }
     }

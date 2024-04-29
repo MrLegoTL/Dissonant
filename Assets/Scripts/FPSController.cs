@@ -6,6 +6,7 @@ public class FPSController : MonoBehaviour
 {
     //referencia al chareacter controller
     public CharacterController player;
+    public Animator anim;
 
     [Header("Movement")]
     //velocidad de desplazamiento
@@ -79,6 +80,7 @@ public class FPSController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E))
         {
             InteractWithObject();
+            
         }
     }
 
@@ -162,6 +164,14 @@ public class FPSController : MonoBehaviour
                 currentInteractable = objects;
                 //Llama a metodo para interactua con el objeto
                 currentInteractable.Interact();
+
+            }
+            if (objects != null && objects.CompareTag("Clicked"))
+            {
+                currentInteractable = objects;
+                //Llama a metodo para interactua con el objeto
+                currentInteractable.Interact();
+                anim.SetTrigger("Click");
 
             }
         }
