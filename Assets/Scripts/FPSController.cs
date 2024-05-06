@@ -36,11 +36,15 @@ public class FPSController : MonoBehaviour
 
     [Header("Interact")]
     //Disctancia maxima para interactuar
-    public float interactDistance = 2f;
+    public float interactDistance = 1f;
     //Referencia al script de los interactuables
     private InteractableObjects currentInteractable;
+    //layers con los que será posible interactuar con la mirada
+    public LayerMask interactableLayer;
+    //para almacenar el resultado de impacto del raycast
+    private RaycastHit hit;
 
-
+ 
     // Start is called before the first frame update
     void Start()
     {
@@ -55,6 +59,7 @@ public class FPSController : MonoBehaviour
         Controls();
         Rotation();
         Movement();
+        InteractWithObject();
     }
 
     /// <summary>
@@ -77,9 +82,9 @@ public class FPSController : MonoBehaviour
         {
             Jump();
         }
-        if(Input.GetKeyDown(KeyCode.E))
+        if(Input.GetKeyDown(KeyCode.E) && currentInteractable !=null)
         {
-            InteractWithObject();
+            currentInteractable.Interact();
             
         }
     }
@@ -151,29 +156,72 @@ public class FPSController : MonoBehaviour
     private void InteractWithObject()
     {
         //Obterner la direccion en la que mira la camara
-        Vector3 cameraDirection = Camera.main.transform.forward;
+        //Vector3 cameraDirection = Camera.main.transform.forward;
 
-        RaycastHit hit;
 
-        // Realizar un raycast desde la posición del jugador en la dirección de la cámara
-        if (Physics.Raycast(transform.position,cameraDirection, out hit, interactDistance))
+
+        //// Realizar un raycast desde la posición del jugador en la dirección de la cámara
+        //if (Physics.Raycast(transform.position,cameraDirection, out hit, interactDistance))
+        //{
+        //    InteractableObjects objects = hit.collider.GetComponent<InteractableObjects>();
+        ////    if(objects != null && objects.CompareTag("Interactable"))
+        ////    {
+        ////        currentInteractable = objects;
+        ////        //Llama a metodo para interactua con el objeto
+        ////        currentInteractable.Interact();
+
+        ////    }
+        ////    if (objects != null && objects.CompareTag("Clicked"))
+        ////    {
+        ////        currentInteractable = objects;
+        ////        //Llama a metodo para interactua con el objeto
+        ////        currentInteractable.Interact();
+        ////        anim.SetTrigger("Click");
+
+        ////    }
+        ////    if(objects != null && objects.CompareTag("PickUp"))
+        ////    {
+        ////        currentInteractable = objects;
+        ////        //Llama a metodo para interactua con el objeto
+        ////        currentInteractable.Interact();
+
+        ////        PickUpObject(objects.gameObject);
+        ////    }
+        //}
+
+        //lanzamos un raycast desde la cabeza del jugador
+        if (Physics.Raycast(head.position,
+                           head.forward,
+                           out hit,
+                           interactDistance,
+                           interactableLayer))
         {
-            InteractableObjects objects = hit.collider.GetComponent<InteractableObjects>();
-            if(objects != null && objects.CompareTag("Interactable"))
-            {
-                currentInteractable = objects;
-                //Llama a metodo para interactua con el objeto
-                currentInteractable.Interact();
-
-            }
-            if (objects != null && objects.CompareTag("Clicked"))
-            {
-                currentInteractable = objects;
-                //Llama a metodo para interactua con el objeto
-                currentInteractable.Interact();
-                anim.SetTrigger("Click");
-
-            }
+            //si se produce un impacto
+            //intentamos recuperar el componente interactable del objeto impactado
+            // y si disponen de el, lo consideramos como el interactuable actual
+            currentInteractable = hit.collider.GetComponent<InteractableObjects>();
+        }
+        else
+        {
+            //si no hya impactado asumimos que no hay interactables al alcance, asi que ponemos a null el  interacdtable actual
+            currentInteractable = null;
         }
     }
+
+    ///// <summary>
+    ///// Metodo para recoger un objeto
+    ///// </summary>
+    ///// <param name="obj"></param>
+    //private void PickUpObject(GameObject obj)
+    //{
+    //    //Coloca el objeto en la posicion de la mano del jugador
+    //    obj.transform.position = hand.position;
+    //    obj.transform.rotation = hand.rotation;
+
+    //    //Cambia el padre del objeto para que sea hijo de la mano
+    //    obj.transform.parent = hand;
+
+    //    //Guarda uan referencia al objeto en la mano del jugador
+    //    objectInHand = obj;
+    //}
 }
