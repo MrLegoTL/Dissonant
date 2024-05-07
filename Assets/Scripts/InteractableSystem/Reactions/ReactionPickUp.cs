@@ -13,6 +13,11 @@ public class ReactionPickUp : Reaction
 
     protected override void React()
     {
+        PickUp();
+    }
+
+    public void PickUp()
+    {
         //Coloca el objeto en la posicion de la mano del jugador
         obj.transform.position = hand.position;
         //obj.transform.rotation = hand.rotation;
