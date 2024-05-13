@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class InteractableObjects : MonoBehaviour
 {
-    ////Referencia al Animator del objeto interactuable
-    //public Animator anim;
-
-    //public Collider collider;
+    [Header("Conditions")]
+    //condiciones que se tienen que cumplir para que se cumpla las acciones positivas
+    public string[] conditions;
     //transform que contendrá como hijos, todas las reacciones positivas
     private Transform positiveReactions;
+    //trnaform contendra como hijos, todas las reccioneas por defecto a realizar cuando no se cumplan las condiciones
+    private Transform defaultReactions;
     //cola para gestionar las secuecias de reacciones a realizar
     private Queue<Reaction> reactionQueue = new Queue<Reaction>();
     //para saber cuando se esta llevando a cabo la secuencia de reacciones
@@ -20,6 +21,9 @@ public class InteractableObjects : MonoBehaviour
         //collider.isTrigger = true;
         //recuperamos de la jerarquia el hijo llamado PositiveReaction (CUIDADO CON ESTO QUE ES HARDCODE)   
         positiveReactions = transform.Find("PositiveReactions");
+        //recuperamos de la jerarquia el hijo llamado DefaultReaction (CUIDADO CON ESTO QUE ES HARDCODE)
+        defaultReactions = transform.Find("DefaultReactions");
+
     }
     public void Interact()
     {
