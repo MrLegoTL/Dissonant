@@ -42,7 +42,7 @@ public class InteractableObjects : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") && triggerInteract)
+        if (other.gameObject.CompareTag("Player") && triggerInteract && this.CompareTag("Door"))
         {
             Interact();
         }
