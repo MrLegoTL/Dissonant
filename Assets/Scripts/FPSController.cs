@@ -38,7 +38,7 @@ public class FPSController : MonoBehaviour
     //Disctancia maxima para interactuar
     public float interactDistance = 1f;
     //Referencia al script de los interactuables
-    private InteractableObjects currentInteractable;
+    public InteractableObjects currentInteractable;
     //layers con los que será posible interactuar con la mirada
     public LayerMask interactableLayer;
     //para almacenar el resultado de impacto del raycast
@@ -60,6 +60,18 @@ public class FPSController : MonoBehaviour
         Rotation();
         Movement();
         InteractWithObject();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        //intentamos recuperar el componente interactuable del objeto colisionado
+        currentInteractable = other.GetComponent<InteractableObjects>();
+
+        //si estamos en contacto con un interactuable, mostramos su nombre por consola
+        if (currentInteractable != null)
+        {
+            Debug.Log("Interactable : " + other.name);
+        }
     }
 
     /// <summary>

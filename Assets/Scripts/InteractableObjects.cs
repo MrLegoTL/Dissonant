@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+[RequireComponent(typeof(SphereCollider))]
 public class InteractableObjects : MonoBehaviour
 {
     [Header("Conditions")]
     //condiciones que se tienen que cumplir para que se cumpla las acciones positivas
     public string[] conditions;
+    public SphereCollider sphereCollider;
     //transform que contendrá como hijos, todas las reacciones positivas
     private Transform positiveReactions;
     //trnaform contendra como hijos, todas las reccioneas por defecto a realizar cuando no se cumplan las condiciones
@@ -15,16 +18,36 @@ public class InteractableObjects : MonoBehaviour
     private Queue<Reaction> reactionQueue = new Queue<Reaction>();
     //para saber cuando se esta llevando a cabo la secuencia de reacciones
     private bool reacting = false;
+    //indica si elinteractable se disparara cuando el jugador entre en contacto con el
+    public bool triggerInteract;
 
     private void Start()
     {
-        //collider.isTrigger = true;
+        sphereCollider.isTrigger = true;
         //recuperamos de la jerarquia el hijo llamado PositiveReaction (CUIDADO CON ESTO QUE ES HARDCODE)   
         positiveReactions = transform.Find("PositiveReactions");
         //recuperamos de la jerarquia el hijo llamado DefaultReaction (CUIDADO CON ESTO QUE ES HARDCODE)
         defaultReactions = transform.Find("DefaultReactions");
 
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player") && triggerInteract)
+        {
+            Interact();
+        }
+
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player") && triggerInteract)
+        {
+            Interact();
+        }
+    }
+
     public void Interact()
     {
         ////verifica si el aniamtor esta asignado
@@ -43,30 +66,38 @@ public class InteractableObjects : MonoBehaviour
         //indicamos que se inicia la secuencia
         reacting = true;
 
-        //ponemos en cola (temporalmente) las reacciones positivas
-        QueueReactions(positiveReactions);
+        //por defecto marcamos como umplidad las condiciones
+        bool success = true;
+
+        //recorro todas las condiciones
+        foreach(string condition in conditions)
+        {
+            //comprueblo si no se cumple la condicion
+            if (!DataManager.instance.CheckCondition(condition))
+            {
+                //marco la booleana de control como false
+                success = false;
+                //y salgo del bucle
+                break;
+            }
+        }
+
+        //si se cumple la condicion y ademas el numero de condiciones es mayor que 0
+        if(success && conditions.Length > 0)
+        {
+            //ponemos en cola (temporalmente) las reacciones positivas
+            QueueReactions(positiveReactions);
+        }
+        else
+        {
+            //ponemos en cola (temporalmente) las reacciones por defecto
+            QueueReactions(defaultReactions);
+        }                 
 
         //iniciamos la cadena de reacciones
         NextReaction();
 
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            Interact();
-        }
-
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            Interact();
-        }
-    }
+    }   
 
     /// <summary>
     /// Pone en cola las reacciones qu ehayan sido configuradas en el contenedor proporcionado

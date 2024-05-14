@@ -11,29 +11,17 @@ public class ReactionDrop : Reaction
     public GameObject objectDropped;
     public GameObject obj;
     public bool dropped  = false;
-    public bool canDrops = false;
+    
 
 
     
 
 
-    public static ReactionDrop instance;
-
-    private void Awake()
-    {
-        if (instance == null) instance = this;
-    }
+    
 
     protected override void React()
     {
-        if (canDrops && !dropped)
-        {
-            DropOff();
-        }
-        else
-        {
-            return;
-        }
+       if(!dropped) DropOff();
         
     }
 
