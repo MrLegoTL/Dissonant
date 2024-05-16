@@ -7,5 +7,10 @@
 		<string name="dron_first_contact_4">Él dejo los objetos en diferentes mundos y desactivo los portales que nos llevan hasta ellos.</string>
 		<string name="dron_first_contact_5">Como esos objetos no pertencen a sus mundos estan provocando un caos espacial.</string>
 		<string name="dron_first_contact_6">Por lo tanto, tu mision es ir a esos mundos y traer de vuelta los objetos disonantes.</string>
+		<string name="dron_after_first_contact">Trae de vuelta los objetos disonantes.</string>
+		<string name="pickup_firts_energy_crystal_1">¡Oh! Has econtrado un cristal de energia.</string>
+		<string name="pickup_firts_energy_crystal_2">Con esto podrás activar un portal. Ahora busca donde colocar el cristal.</string>
+		<string name="dropout_firts_energy_crystal_1">¡Estupendo! Has activado un portal.</string>
+		<string name="dropout_firts_energy_crystal_2">Atraviesalo y trae de vuelrta el objeto disonantes.</string>
 	</lang>
 </main>

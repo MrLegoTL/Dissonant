@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -44,6 +45,9 @@ public class FPSController : MonoBehaviour
     //para almacenar el resultado de impacto del raycast
     private RaycastHit hit;
 
+    public static Action OnEnterPressed;
+
+
  
     // Start is called before the first frame update
     void Start()
@@ -60,6 +64,11 @@ public class FPSController : MonoBehaviour
         Rotation();
         Movement();
         InteractWithObject();
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            OnEnterPressed?.Invoke();
+        }
     }
 
     private void OnTriggerEnter(Collider other)

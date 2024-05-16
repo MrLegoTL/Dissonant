@@ -11,7 +11,7 @@ public class Reaction : MonoBehaviour
     //timepo que tardara en ejecutarse esta reaccion
     public float delay;
     //contador interno para gestionar el delay
-    private float delayCounter;
+    public float delayCounter;
 
     //referencia al interactable, que dejaremos oculta ya que se configurara automaticamente desde otro script
     [HideInInspector]
@@ -50,7 +50,7 @@ public class Reaction : MonoBehaviour
         while (delayCounter > 0)
         {
             yield return new WaitForEndOfFrame();
-            delayCounter -= Time.deltaTime;
+            //delayCounter -= Time.deltaTime;
         }
 
         //una vez finalizado el delay, realizaremos las acciones de final de reaccion
