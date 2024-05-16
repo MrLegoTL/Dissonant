@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<main>
+	<lang>
+		<string name="dron_first_contact_1">Hola astronauta A3008, bienvenido a la estación espacial Mercury.</string>
+		<string name="dron_first_contact_2">Te explicare tu misión. Debes encontrar los objetos disonates de diferentes mundos.</string>
+		<string name="dron_first_contact_3">Espero que no te de un brote de locura como al antiguo astronauta.</string>
+		<string name="dron_first_contact_4">Él dejo los objetos en diferentes mundos y desactivo los portales que nos llevan hasta ellos.</string>
+		<string name="dron_first_contact_5">Como esos objetos no pertencen a sus mundos estan provocando un caos espacial.</string>
+		<string name="dron_first_contact_6">Por lo tanto, tu mision es ir a esos mundos y traer de vuelta los objetos disonantes.</string>
+	</lang>
+</main>
