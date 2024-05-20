@@ -12,5 +12,6 @@
 		<string name="pickup_firts_energy_crystal_2">Con esto podrás activar un portal. Ahora busca donde colocar el cristal.</string>
 		<string name="dropout_firts_energy_crystal_1">¡Estupendo! Has activado un portal.</string>
 		<string name="dropout_firts_energy_crystal_2">Atraviesalo y trae de vuelrta el objeto disonantes.</string>
+    <string name="dropped_energy_crystal">Ya has colocado el cristal de energia.</string>
 	</lang>
 </main>
