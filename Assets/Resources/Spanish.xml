@@ -13,5 +13,7 @@
 		<string name="dropout_firts_energy_crystal_1">¡Estupendo! Has activado un portal.</string>
 		<string name="dropout_firts_energy_crystal_2">Atraviesalo y trae de vuelrta el objeto disonantes.</string>
     <string name="dropped_energy_crystal">Ya has colocado el cristal de energia.</string>
+    <string name="panel_interact_first_contact_1">Vaya parace que al interactuar con estos botones las plataformas se mueven.</string>
+    <string name="panel_interact_first_contact_2">No me extraña aqui vivian seres muy ingeniosos.</string>
 	</lang>
 </main>

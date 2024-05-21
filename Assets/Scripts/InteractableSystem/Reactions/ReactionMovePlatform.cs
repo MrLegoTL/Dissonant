@@ -12,51 +12,80 @@ public class ReactionMovePlatform : Reaction
     public bool isMoving = false;
     public GameObject deactivateCollider;
     public FPSController player;
-    //private void Awake()
-    //{
-    //    //DOTween.Init();
-    //}
+    public float moveTime = 2f;
+
+    
 
     protected override void React()
     {
-        if (!snapping)
+        //if (!snapping)
+        //{
+        //    isMoving = true;
+        //    deactivateCollider.SetActive(true);
+        //    if (interactable.triggerInteract)
+        //    {
+        //        player.transform.SetParent(platform.transform);
+        //        player.enabled = false;
+        //    }
+
+        //    platform.transform.DOMove(finalPosition.position, moveTime).OnComplete(() =>
+        //    {
+        //        player.enabled = true;
+        //        isMoving = false;
+        //        player.transform.SetParent(null);
+        //    });
+
+        //    snapping = true;
+        //}
+        //else if (snapping)
+        //{
+        //    isMoving = true;
+        //    deactivateCollider.SetActive(false);
+        //    if (interactable.triggerInteract)
+        //    {
+        //        player.transform.SetParent(platform.transform);
+        //        player.enabled = false;
+        //    }
+
+        //    platform.transform.DOMove(initialPosition.position, moveTime).OnComplete(() =>
+        //    {
+        //        isMoving = false;
+        //        player.transform.SetParent(null);
+        //        player.enabled = true;
+        //    });
+
+        //    snapping = false;
+        //}
+
+        if (isMoving) return; // Evita que se pueda iniciar otro movimiento mientras la plataforma ya está en movimiento
+
+        isMoving = true;
+        deactivateCollider.SetActive(true);
+
+        if (interactable.triggerInteract)
         {
-            isMoving = true;
-            deactivateCollider.SetActive(true);
-            if (interactable.triggerInteract)
-            {
-                player.transform.SetParent(platform.transform);
-            }           
-
-            platform.transform.DOMove(finalPosition.position, 1.5f).OnComplete(() =>
-            {
-                isMoving = false;
-                player.transform.SetParent(null);
-            });
-
-            snapping = true;
+            player.transform.SetParent(platform.transform);
+            player.enabled = false;
         }
-        else if (snapping)
+
+        Vector3 targetPosition = snapping ? initialPosition.position : finalPosition.position;
+        snapping = !snapping;
+
+        platform.transform.DOMove(targetPosition, moveTime).OnComplete(() =>
         {
-            isMoving = true;
+            player.enabled = true;
+            player.transform.SetParent(null);
+            isMoving = false;
             deactivateCollider.SetActive(false);
-            if (interactable.triggerInteract)
-            {
-                player.transform.SetParent(platform.transform);
-            }
+        });
 
-            platform.transform.DOMove(initialPosition.position, 1.5f).OnComplete(() =>
-            {
-                isMoving = false;
-                player.transform.SetParent(null);
-            });
 
-            snapping = false;
-        }
 
     }
 
-   
+    
+
+
 }
 
     
