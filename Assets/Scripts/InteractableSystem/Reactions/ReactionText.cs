@@ -15,6 +15,7 @@ public class ReactionText : Reaction
     public static Action<string, Color> OnDisplayMessage;
     //action que informara que se oculta el mensaje
     public static Action OnHideMessage;
+    public CharacterController player;
 
     
 
@@ -39,6 +40,8 @@ public class ReactionText : Reaction
         //en caso contrario respetamos el tiempo asignado
         delay = (delay == 0) ? TranslateManager.instance.GetString(textID).Length * characterReadTime : delay;
 
+        player.enabled = false;
+
         
         
        
@@ -54,7 +57,8 @@ public class ReactionText : Reaction
     {
         //ocultamos el mensaje tras el delay, antes de pasar a la siguiente reaccion
         //textContainer.HideMessage();
-        OnHideMessage?.Invoke();       
+        OnHideMessage?.Invoke();
+        player.enabled = true;
 
 
         base.PostReact();
