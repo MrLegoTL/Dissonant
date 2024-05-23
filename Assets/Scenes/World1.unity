@@ -10803,6 +10803,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07a854b73bc2e464582397d610d5fe53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!143 &527124564 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 8394658365656522790, guid: 7070af19f92937b4f9370e350eb6cd96, type: 3}
+  m_PrefabInstance: {fileID: 912096790}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &530177080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26926,6 +26931,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 866553089}
     m_Modifications:
     - target: {fileID: 232205198363689475, guid: 241cc6cc52aff1a4699e790ca0f1bcd1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 527124564}
+    - target: {fileID: 232205198363689475, guid: 241cc6cc52aff1a4699e790ca0f1bcd1, type: 3}
       propertyPath: textID
       value: panel_interact_first_contact_1
       objectReference: {fileID: 0}
@@ -37743,6 +37752,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 866553089}
     m_Modifications:
+    - target: {fileID: 232205198363689475, guid: 241cc6cc52aff1a4699e790ca0f1bcd1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 527124564}
     - target: {fileID: 232205198363689475, guid: 241cc6cc52aff1a4699e790ca0f1bcd1, type: 3}
       propertyPath: textID
       value: panel_interact_first_contact_2

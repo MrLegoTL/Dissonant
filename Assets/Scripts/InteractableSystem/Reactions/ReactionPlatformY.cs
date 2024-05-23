@@ -8,6 +8,7 @@ public class ReactionPlatformY : Reaction
     public GameObject platform;
     public Vector3 initialPosition;
     public Vector3 finalPosition;
+    public Vector3 midPosition;
     public bool snapping = false;
     public bool isMoving = false;
     public GameObject deactivateCollider;
@@ -23,7 +24,10 @@ public class ReactionPlatformY : Reaction
         initialPosition = platform.transform.localPosition;
         // Calcula la posición final de la plataforma desplazándose en el eje X
         finalPosition = initialPosition + new Vector3(0, moveDistanceY, 0);
+        midPosition = initialPosition + new Vector3(0,-moveDistanceY, 0);
     }
+
+   
 
 
     protected override void React()
@@ -39,7 +43,7 @@ public class ReactionPlatformY : Reaction
             player.enabled = false;
         }
 
-        Vector3 targetPosition = snapping ? initialPosition : finalPosition;
+        Vector3 targetPosition = snapping ? midPosition : finalPosition;
         snapping = !snapping;
 
         platform.transform.DOLocalMoveY(targetPosition.y, moveTime).OnComplete(() =>
