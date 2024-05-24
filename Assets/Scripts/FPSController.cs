@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
+using UnityEngine.UI;
 
 public class FPSController : MonoBehaviour
 {
@@ -45,6 +47,12 @@ public class FPSController : MonoBehaviour
     //para almacenar el resultado de impacto del raycast
     private RaycastHit hit;
 
+    [Header("IndicatorDisplay")]
+    //imagen que se mostrará cuando no haya elementos interactivos a la vista
+    public Image spot;
+    public Image hand;
+
+
     public static Action OnEnterPressed;
 
 
@@ -64,6 +72,7 @@ public class FPSController : MonoBehaviour
         Rotation();
         Movement();
         InteractWithObject();
+        IndicatorDisplay();
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
@@ -227,6 +236,13 @@ public class FPSController : MonoBehaviour
             //si no hya impactado asumimos que no hay interactables al alcance, asi que ponemos a null el  interacdtable actual
             currentInteractable = null;
         }
+    }
+
+    public void IndicatorDisplay()
+    {
+        hand.enabled = currentInteractable != null && !currentInteractable.triggerInteract;
+
+        spot.enabled = (currentInteractable != null && currentInteractable.triggerInteract) || currentInteractable == null;
     }
 
     ///// <summary>

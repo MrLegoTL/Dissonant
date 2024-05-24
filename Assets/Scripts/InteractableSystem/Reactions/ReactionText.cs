@@ -16,6 +16,8 @@ public class ReactionText : Reaction
     //action que informara que se oculta el mensaje
     public static Action OnHideMessage;
     public CharacterController player;
+    public FPSController fpsController;
+    
 
     
 
@@ -41,7 +43,8 @@ public class ReactionText : Reaction
         delay = (delay == 0) ? TranslateManager.instance.GetString(textID).Length * characterReadTime : delay;
 
         player.enabled = false;
-
+        fpsController.sensitivity = 0f;
+        
         
         
        
@@ -59,7 +62,7 @@ public class ReactionText : Reaction
         //textContainer.HideMessage();
         OnHideMessage?.Invoke();
         player.enabled = true;
-
+        fpsController.sensitivity = 2f;
 
         base.PostReact();
     }
