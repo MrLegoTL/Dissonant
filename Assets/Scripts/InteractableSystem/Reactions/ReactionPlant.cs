@@ -7,8 +7,9 @@ public class ReactionPlant : Reaction
 {
     public GameObject plant;
     public float moveTime = 3f;
+    public GameObject lightPlants;
 
-   
+
     protected override void React()
     {
         plant.transform.DOMoveY(26f, moveTime);
@@ -29,6 +30,7 @@ public class ReactionPlant : Reaction
         }
 
         plant.SetActive(false);
+        lightPlants.SetActive(true);
 
 
     }
