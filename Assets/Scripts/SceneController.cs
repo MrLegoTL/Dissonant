@@ -107,7 +107,7 @@ public class SceneController : MonoBehaviour
         yield return StartCoroutine(Fade(1));
         //una vez finalizado el fade
         //descargamos la escena activa de forma asincrona
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         //una vez termianda la descarga, cargamos y activamos la escean indicada
         yield return StartCoroutine(LoadSceneAndSetActive(sceneName));
         //tras terminar la carga de la escena, realizamos un fade in
