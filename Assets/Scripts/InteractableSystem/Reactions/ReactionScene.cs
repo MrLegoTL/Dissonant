@@ -9,5 +9,6 @@ public class ReactionScene : Reaction
     protected override void React()
     {
         SceneController.instance.FadeAndLoadScene(sceneName);
+        GameManager.instance.ChangeMusicScenes(sceneName);
     }
 }

@@ -46,6 +46,8 @@ public class FPSController : MonoBehaviour
     public LayerMask interactableLayer;
     //para almacenar el resultado de impacto del raycast
     private RaycastHit hit;
+    //el objeto actualmente en la mano del jugador
+    public GameObject objectInHand;
 
     [Header("IndicatorDisplay")]
     //imagen que se mostrará cuando no haya elementos interactivos a la vista
@@ -55,8 +57,13 @@ public class FPSController : MonoBehaviour
 
     public static Action OnEnterPressed;
 
+    public static FPSController instance;
 
- 
+    private void Awake()
+    {
+        if (instance == null) instance = this;  
+    }
+
     // Start is called before the first frame update
     void Start()
     {

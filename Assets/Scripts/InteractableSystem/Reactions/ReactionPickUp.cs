@@ -7,8 +7,7 @@ public class ReactionPickUp : Reaction
     [Header("PickUp")]
     //referencia a la posicion de la mano del jugador
     public Transform hand;
-    //el objeto actualmente en la mano del jugador
-    public GameObject objectInHand;
+    
     public GameObject obj;
 
     protected override void React()
@@ -18,6 +17,7 @@ public class ReactionPickUp : Reaction
 
     public void PickUp()
     {
+        if (FPSController.instance.objectInHand != null) return;
         //Coloca el objeto en la posicion de la mano del jugador
         obj.transform.position = hand.position;
         //obj.transform.rotation = hand.rotation;
@@ -26,7 +26,7 @@ public class ReactionPickUp : Reaction
         obj.transform.parent = hand;
 
         //Guarda uan referencia al objeto en la mano del jugador
-        objectInHand = obj;
+        FPSController.instance.objectInHand = obj;
     }
 }
 
