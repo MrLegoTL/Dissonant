@@ -15,6 +15,9 @@ public class SceneController : MonoBehaviour
     //para indicar que se esta realizando un fade actualemnte
     private bool isFading;
 
+    public Transform playerPosition;
+    public FPSController player;
+
     public static SceneController instance;
 
     private void Awake()
@@ -31,6 +34,9 @@ public class SceneController : MonoBehaviour
         yield return StartCoroutine(LoadSceneAndSetActive(startScene));
         //una vez cargada la escena
         StartCoroutine(Fade(0));
+
+        
+        player = FindObjectOfType<FPSController>();
     }
 
     /// <summary>
@@ -94,6 +100,8 @@ public class SceneController : MonoBehaviour
         Scene newlyLoadedScene = SceneManager.GetSceneAt(SceneManager.sceneCount - 1);
         //marcamos esta escena como activa
         SceneManager.SetActiveScene(newlyLoadedScene);
+
+        player.transform.position = playerPosition.transform.position;
     }
 
     /// <summary>
@@ -124,5 +132,6 @@ public class SceneController : MonoBehaviour
         if (isFading) return;
         //iniciamos el proceso de fundido y carga de escena
         StartCoroutine(FadeAndSwitchScenes(sceneName));
+        
     }
 }

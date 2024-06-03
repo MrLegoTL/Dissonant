@@ -39,6 +39,7 @@ public class ReactionDrop : Reaction
         //Guarda uan referencia al objeto en la mano del jugador
         objectDropped = obj;
         dropped = true;
+        FPSController.instance.objectInHand = null;
     }
 
   
