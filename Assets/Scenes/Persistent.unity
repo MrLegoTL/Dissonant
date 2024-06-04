@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
     currentScene: 
-    entrancePoint: 
+    entrancePoint: InitialPosition
     allCondition:
     - name: unlock_Capsule
       description: 
@@ -162,8 +162,36 @@ MonoBehaviour:
     - name: CrystalBlue_PickUp
       description: 
       done: 0
+    - name: Activate_Portal
+      description: 
+      done: 0
+    - name: Dron_FirstContact
+      description: 
+      done: 0
+    - name: capsule_closed
+      description: 
+      done: 0
+    - name: unlock_Capsule_2
+      description: 
+      done: 0
+    - name: capsule_closed_2
+      description: 
+      done: 0
+    - name: Activate_Portal_2
+      description: 
+      done: 0
+    - name: CrystalRed_PickUp
+      description: 
+      done: 0
+    - name: change_platform_position
+      description: 
+      done: 0
+    - name: change_platform_position_1
+      description: 
+      done: 0
     statistics: []
     achievements: []
+  playerPosition: InitialPosition
   fileName: data.dat
 --- !u!4 &735284944
 Transform:
@@ -495,8 +523,6 @@ MonoBehaviour:
   faderCanvasGroup: {fileID: 1634173564}
   fadeDuration: 1
   startScene: Game
-  playerPosition: {fileID: 1029352749}
-  player: {fileID: 0}
 --- !u!4 &1996142139
 Transform:
   m_ObjectHideFlags: 0

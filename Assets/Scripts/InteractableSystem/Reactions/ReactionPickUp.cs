@@ -6,7 +6,7 @@ public class ReactionPickUp : Reaction
 {
     [Header("PickUp")]
     //referencia a la posicion de la mano del jugador
-    public Transform hand;
+    
     
     public GameObject obj;
 
@@ -17,16 +17,16 @@ public class ReactionPickUp : Reaction
 
     public void PickUp()
     {
-        if (FPSController.instance.objectInHand != null) return;
+        if (DataManager.instance.objectInHand != null) return;
         //Coloca el objeto en la posicion de la mano del jugador
-        obj.transform.position = hand.position;
+        obj.transform.position = FPSController.instance.handToObject.position;
         //obj.transform.rotation = hand.rotation;
 
         //Cambia el padre del objeto para que sea hijo de la mano
-        obj.transform.parent = hand;
+        obj.transform.parent = FPSController.instance.handToObject;
 
         //Guarda uan referencia al objeto en la mano del jugador
-        FPSController.instance.objectInHand = obj;
+        DataManager.instance.objectInHand = obj;
     }
 }
 

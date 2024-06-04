@@ -15,8 +15,8 @@ public class SceneController : MonoBehaviour
     //para indicar que se esta realizando un fade actualemnte
     private bool isFading;
 
-    public Transform playerPosition;
-    public FPSController player;
+    
+    
 
     public static SceneController instance;
 
@@ -36,7 +36,7 @@ public class SceneController : MonoBehaviour
         StartCoroutine(Fade(0));
 
         
-        player = FindObjectOfType<FPSController>();
+        
     }
 
     /// <summary>
@@ -84,6 +84,7 @@ public class SceneController : MonoBehaviour
     /// <returns></returns>
     private IEnumerator LoadSceneAndSetActive(string sceneName)
     {
+        
         if (sceneName == "")
         {
             Debug.LogWarning("No se ha indicado una escean que cargar");
@@ -101,7 +102,7 @@ public class SceneController : MonoBehaviour
         //marcamos esta escena como activa
         SceneManager.SetActiveScene(newlyLoadedScene);
 
-        player.transform.position = playerPosition.transform.position;
+        
     }
 
     /// <summary>

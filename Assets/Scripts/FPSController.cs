@@ -47,7 +47,8 @@ public class FPSController : MonoBehaviour
     //para almacenar el resultado de impacto del raycast
     private RaycastHit hit;
     //el objeto actualmente en la mano del jugador
-    public GameObject objectInHand;
+    
+    public Transform handToObject;
 
     [Header("IndicatorDisplay")]
     //imagen que se mostrará cuando no haya elementos interactivos a la vista
@@ -67,7 +68,9 @@ public class FPSController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        SceneInitialPosition();
+
+
     }
 
     // Update is called once per frame
@@ -252,20 +255,15 @@ public class FPSController : MonoBehaviour
         spot.enabled = (currentInteractable != null && currentInteractable.triggerInteract) || currentInteractable == null;
     }
 
-    ///// <summary>
-    ///// Metodo para recoger un objeto
-    ///// </summary>
-    ///// <param name="obj"></param>
-    //private void PickUpObject(GameObject obj)
-    //{
-    //    //Coloca el objeto en la posicion de la mano del jugador
-    //    obj.transform.position = hand.position;
-    //    obj.transform.rotation = hand.rotation;
+    public void SceneInitialPosition()
+    {
+        GameObject playerPositon = GameObject.Find(DataManager.instance.playerPosition);
+        if (playerPositon != null)
+        {
+            transform.position = playerPositon.transform.position;
+            transform.rotation = playerPositon.transform.rotation;
+        }
+    }
 
-    //    //Cambia el padre del objeto para que sea hijo de la mano
-    //    obj.transform.parent = hand;
-
-    //    //Guarda uan referencia al objeto en la mano del jugador
-    //    objectInHand = obj;
-    //}
+  
 }
