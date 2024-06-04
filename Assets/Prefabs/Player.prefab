@@ -454,6 +454,7 @@ MonoBehaviour:
   interactableLayer:
     serializedVersion: 2
     m_Bits: 64
+  handToObject: {fileID: 5756826207696999187}
   spot: {fileID: 1984050073580316664}
   hand: {fileID: 8670324551632768008}
 --- !u!1 &3639256913224995033

@@ -47,7 +47,7 @@ public class DataManager : MonoBehaviour
 
     void Start()
     {
-        if (objectInHand == null) return;       
+        if (objectInHand == null) return;
         Instantiate(objectInHand);
         objectInHand.transform.position = FPSController.instance.handToObject.position;
         //Cambia el padre del objeto para que sea hijo de la mano

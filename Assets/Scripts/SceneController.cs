@@ -120,7 +120,9 @@ public class SceneController : MonoBehaviour
         //una vez termianda la descarga, cargamos y activamos la escean indicada
         yield return StartCoroutine(LoadSceneAndSetActive(sceneName));
         //tras terminar la carga de la escena, realizamos un fade in
-        yield return StartCoroutine(Fade(0));
+        yield return StartCoroutine(Fade(0));        
+        
+        
     }
 
     /// <summary>
