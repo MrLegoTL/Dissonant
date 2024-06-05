@@ -11,7 +11,7 @@ public class PatrolActions : StateAction
 
     public override void Act(StateController controller)
     {
-        throw new System.NotImplementedException();
+        Patrol(controller);
     }
 
     /// <summary>
