@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//para poder hacer uso de los audio mixers
+using UnityEngine.Audio;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(AudioSource))]
 public class SoundManager : MonoBehaviour
@@ -22,6 +25,10 @@ public class SoundManager : MonoBehaviour
     //timepo de acmbio de pitch
     [Range(0, 2)]
     public float pitchTime = 1f;
+
+    public AudioMixer audioMixer;
+    public Slider musicVolumeSlider; // Slider para ajustar el volumen de la música
+    public Slider soundEffectsSlider; // Slider para ajustar el volumen de los efectos sonoros
 
 
     //corrutina para la gestion del fade entre musicas
@@ -56,7 +63,7 @@ public class SoundManager : MonoBehaviour
         if (audioSource.clip == menuClip) return;
 
         if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
-        fadeCoroutine = StartCoroutine(FadeAndChangeClip(menuClip));
+        fadeCoroutine = StartCoroutine(FadeAndChangeClip(menuClip, musicVolumeSlider.value));
     }
 
     /// <summary>
@@ -68,7 +75,7 @@ public class SoundManager : MonoBehaviour
         if (audioSource.clip == gameClip) return;
 
         if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
-        fadeCoroutine = StartCoroutine(FadeAndChangeClip(gameClip));
+        fadeCoroutine = StartCoroutine(FadeAndChangeClip(gameClip, musicVolumeSlider.value));
     }
     /// <summary>
     /// Reproduce el audio del Mundo de Amateratsu
@@ -78,7 +85,7 @@ public class SoundManager : MonoBehaviour
     {
         if(audioSource.clip == amateratsuClip) return;
         if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
-        fadeCoroutine = StartCoroutine(FadeAndChangeClip(amateratsuClip));
+        fadeCoroutine = StartCoroutine(FadeAndChangeClip(amateratsuClip, musicVolumeSlider.value));
 
     }
 
@@ -86,7 +93,7 @@ public class SoundManager : MonoBehaviour
     {
         if (audioSource.clip == blossomClip) return;
         if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
-        fadeCoroutine = StartCoroutine(FadeAndChangeClip(blossomClip));
+        fadeCoroutine = StartCoroutine(FadeAndChangeClip(blossomClip, musicVolumeSlider.value));
     }
 
     /// <summary>
@@ -94,10 +101,11 @@ public class SoundManager : MonoBehaviour
     /// </summary>
     /// <param name="clip"></param>
     /// <returns></returns>
-    private IEnumerator FadeAndChangeClip(AudioClip clip)
+    private IEnumerator FadeAndChangeClip(AudioClip clip, float volume)
     {
+
         // usaremos el contador con la mitad del tiempo ya que deberemos hacer el fundido de salida y de entrada
-        float counter = audioSource.volume;
+        float counter = volume;
 
         while (counter > 0)
         {
@@ -116,10 +124,41 @@ public class SoundManager : MonoBehaviour
 
         while (counter < (fadeTime / 2))
         {
-            audioSource.volume = 0.2f;
+            audioSource.volume = volume;
             counter += Time.deltaTime;
             yield return null;
         }
     }
-   
+
+
+    /// <summary>
+    /// Configura el volumen del canal Sounds
+    /// </summary>
+    /// <param name="volume"></param>
+    public void SetSound(float volume)
+    {
+        audioMixer.SetFloat("Sounds", Mathf.Log10(volume) * 20);
+    }
+
+    /// <summary>
+    /// configura el volumen de la musica
+    /// </summary>
+    /// <param name="volume"></param>
+    public void SetMusic(float volume)
+    {
+        audioMixer.SetFloat("Music", Mathf.Log10(volume) * 20);
+    }
+
+    // Método para manejar el cambio de valor del slider de música
+    public void OnMusicVolumeChanged()
+    {
+        SetMusic(musicVolumeSlider.value);
+    }
+
+    // Método para manejar el cambio de valor del slider de efectos sonoros
+    public void OnSoundEffectsVolumeChanged()
+    {
+        SetSound(soundEffectsSlider.value);
+    }
+
 }
