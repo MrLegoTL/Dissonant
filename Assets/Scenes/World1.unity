@@ -22122,6 +22122,9 @@ MonoBehaviour:
   finalClip: {fileID: 8300000, guid: 6eead82dc1010dc49be1d2ebf336e3dc, type: 3}
   fadeTime: 2
   pitchTime: 1
+  audioMixer: {fileID: 0}
+  musicVolumeSlider: {fileID: 0}
+  soundEffectsSlider: {fileID: 0}
 --- !u!82 &1029641459
 AudioSource:
   m_ObjectHideFlags: 0
@@ -30440,6 +30443,7 @@ MonoBehaviour:
     statistics: []
     achievements: []
   playerPosition: InitialPosition
+  objectInHand: {fileID: 0}
   fileName: data.dat
 --- !u!4 &1406996476
 Transform:
@@ -48391,15 +48395,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3734602201266207952, guid: deb19142c4f128a4cbbef4bc2f265531, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -11.01
       objectReference: {fileID: 0}
     - target: {fileID: 3734602201266207952, guid: deb19142c4f128a4cbbef4bc2f265531, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 52.03
       objectReference: {fileID: 0}
     - target: {fileID: 3734602201266207952, guid: deb19142c4f128a4cbbef4bc2f265531, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 24.99
       objectReference: {fileID: 0}
     - target: {fileID: 3734602201266207952, guid: deb19142c4f128a4cbbef4bc2f265531, type: 3}
       propertyPath: m_LocalRotation.w
