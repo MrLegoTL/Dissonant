@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1.3939129, g: 0.8215538, b: 0.2730756, a: 1}
+  m_IndirectSpecularColor: {r: 1.393314, g: 0.82122433, b: 0.27298072, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2223,6 +2223,7 @@ MonoBehaviour:
     statistics: []
     achievements: []
   playerPosition: InitialPosition
+  objectInHand: {fileID: 0}
   fileName: data.dat
 --- !u!4 &601595162
 Transform:
@@ -6365,6 +6366,9 @@ MonoBehaviour:
   finalClip: {fileID: 8300000, guid: 6eead82dc1010dc49be1d2ebf336e3dc, type: 3}
   fadeTime: 2
   pitchTime: 1
+  audioMixer: {fileID: 0}
+  musicVolumeSlider: {fileID: 0}
+  soundEffectsSlider: {fileID: 0}
 --- !u!82 &1476062247
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7624,6 +7628,10 @@ PrefabInstance:
     - target: {fileID: 2886391302089870451, guid: 7070af19f92937b4f9370e350eb6cd96, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886391302089870451, guid: 7070af19f92937b4f9370e350eb6cd96, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3976889184522117098, guid: 7070af19f92937b4f9370e350eb6cd96, type: 3}
       propertyPath: interactDistance
