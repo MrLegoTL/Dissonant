@@ -14,6 +14,7 @@ public class InteractableObjects : MonoBehaviour
     private Transform positiveReactions;
     //trnaform contendra como hijos, todas las reccioneas por defecto a realizar cuando no se cumplan las condiciones
     private Transform defaultReactions;
+    
     //cola para gestionar las secuecias de reacciones a realizar
     private Queue<Reaction> reactionQueue = new Queue<Reaction>();
     //para saber cuando se esta llevando a cabo la secuencia de reacciones
@@ -28,6 +29,7 @@ public class InteractableObjects : MonoBehaviour
         positiveReactions = transform.Find("PositiveReactions");
         //recuperamos de la jerarquia el hijo llamado DefaultReaction (CUIDADO CON ESTO QUE ES HARDCODE)
         defaultReactions = transform.Find("DefaultReactions");
+       
 
     }
 
@@ -81,9 +83,10 @@ public class InteractableObjects : MonoBehaviour
                 break;
             }
         }
-
+         
+       
         //si se cumple la condicion y ademas el numero de condiciones es mayor que 0
-        if(success && conditions.Length > 0)
+        if(success && conditions.Length > 0 )
         {
             //ponemos en cola (temporalmente) las reacciones positivas
             QueueReactions(positiveReactions);

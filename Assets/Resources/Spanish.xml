@@ -15,5 +15,6 @@
     <string name="dropped_energy_crystal">Ya has colocado el cristal de energia.</string>
     <string name="panel_interact_first_contact_1">Vaya parace que al interactuar con estos botones las plataformas se mueven.</string>
     <string name="panel_interact_first_contact_2">No me extraña aqui vivian seres muy ingeniosos.</string>
+    <string name="object_in_hand">Ya llevas un objeto en la mano.</string>
 	</lang>
 </main>
