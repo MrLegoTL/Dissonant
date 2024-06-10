@@ -183,17 +183,16 @@ MonoBehaviour:
     - name: CrystalRed_PickUp
       description: 
       done: 0
-    - name: change_platform_position
+    - name: change_platform_positions
       description: 
       done: 0
-    - name: change_platform_position_1
+    - name: change_platform_positions_1
       description: 
       done: 0
     statistics: []
     achievements: []
   playerPosition: InitialPosition
   objectInHandName: 
-  objectInHand: {fileID: 0}
   objects:
   - {fileID: 7901038046059384752, guid: 01668cf32b82ab8439ad509bf37f27dd, type: 3}
   - {fileID: 656813320180579026, guid: 1ea621fccdf9ea04e8a4fb6be273cfff, type: 3}
