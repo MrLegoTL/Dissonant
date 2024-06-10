@@ -45,6 +45,8 @@ public class DataManager : MonoBehaviour
 
         //cargamos el data previo si este existe
         Load();
+
+        
     }
 
     void Start()
@@ -163,5 +165,7 @@ public class DataManager : MonoBehaviour
          return result;
 
     }
+
+    
 
 }

@@ -196,6 +196,7 @@ MonoBehaviour:
   objects:
   - {fileID: 7901038046059384752, guid: 01668cf32b82ab8439ad509bf37f27dd, type: 3}
   - {fileID: 656813320180579026, guid: 1ea621fccdf9ea04e8a4fb6be273cfff, type: 3}
+  - {fileID: 334450903052052189, guid: f8e54e7ded01d954b9ba99cb8a3e0e50, type: 3}
   fileName: data.dat
 --- !u!4 &735284944
 Transform:

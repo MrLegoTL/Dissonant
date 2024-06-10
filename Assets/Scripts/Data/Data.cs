@@ -16,4 +16,6 @@ public class Data
     public Stat[] statistics;
     //listado de logro disponibles
     public Achievement[] achievements;
+
+    
 }
