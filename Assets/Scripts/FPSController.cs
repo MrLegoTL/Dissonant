@@ -69,7 +69,7 @@ public class FPSController : MonoBehaviour
     void Start()
     {
         SceneInitialPosition();
-
+        ObjectInHand();
 
     }
 
@@ -265,5 +265,12 @@ public class FPSController : MonoBehaviour
         }
     }
 
+    public void ObjectInHand()
+    {
+        if (DataManager.instance.CheckObjectInHand() == null) return;
+        GameObject temp = Instantiate(DataManager.instance.CheckObjectInHand(), handToObject.position, DataManager.instance.CheckObjectInHand().transform.rotation);
+        temp.transform.parent = handToObject;       
+        
+    }
   
 }

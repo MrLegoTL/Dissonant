@@ -13,7 +13,9 @@ public class DataManager : MonoBehaviour
     //Objeto que contendra toda la informacion de condiciones, items, etc.. asin como su estado
     public Data data;
     public string playerPosition = "InitialPosition";
-    public GameObject objectInHand;
+    public string objectInHandName;
+    
+    public GameObject[] objects;
     public string fileName = "data.dat";
     //combinacion de ruta + nombre de archivo
     private string dataPath;
@@ -47,11 +49,7 @@ public class DataManager : MonoBehaviour
 
     void Start()
     {
-        if (objectInHand == null) return;
-        Instantiate(objectInHand);
-        objectInHand.transform.position = FPSController.instance.handToObject.position;
-        //Cambia el padre del objeto para que sea hijo de la mano
-        objectInHand.transform.parent = FPSController.instance.handToObject;
+        
     }
 
     /// <summary>
@@ -156,6 +154,14 @@ public class DataManager : MonoBehaviour
             //si no existe la condicion, devolvemos un flase
             return false;
         }
+    }
+
+    public GameObject CheckObjectInHand()
+    {
+         GameObject result = objects.Where(o => o.name == objectInHandName).FirstOrDefault();
+
+         return result;
+
     }
 
 }

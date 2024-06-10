@@ -192,7 +192,11 @@ MonoBehaviour:
     statistics: []
     achievements: []
   playerPosition: InitialPosition
+  objectInHandName: 
   objectInHand: {fileID: 0}
+  objects:
+  - {fileID: 7901038046059384752, guid: 01668cf32b82ab8439ad509bf37f27dd, type: 3}
+  - {fileID: 656813320180579026, guid: 1ea621fccdf9ea04e8a4fb6be273cfff, type: 3}
   fileName: data.dat
 --- !u!4 &735284944
 Transform:

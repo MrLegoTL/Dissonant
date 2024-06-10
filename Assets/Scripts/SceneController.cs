@@ -135,6 +135,8 @@ public class SceneController : MonoBehaviour
         if (isFading) return;
         //iniciamos el proceso de fundido y carga de escena
         StartCoroutine(FadeAndSwitchScenes(sceneName));
+
+        
         
     }
 }

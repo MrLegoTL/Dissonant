@@ -75,11 +75,16 @@ public class GameManager : MonoBehaviour
     {
         //CAMBIA EL ESTADO DEL JUEGO
         ChangeState(GameState.Paused);
-
+        
         //pausa el juego
         Time.timeScale = 0f;
         //activa la pantalla de pausa
         pauseMenu.alpha = 1f;
+
+        //hacemos visible el cursor
+        Cursor.visible = true;
+        //desbloqueamos el cursor
+        Cursor.lockState = CursorLockMode.None;
 
     }
 
