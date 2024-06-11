@@ -16,5 +16,7 @@
     <string name="panel_interact_first_contact_1">Vaya parace que al interactuar con estos botones las plataformas se mueven.</string>
     <string name="panel_interact_first_contact_2">No me extraña aqui vivian seres muy ingeniosos.</string>
     <string name="object_in_hand">Ya llevas un objeto en la mano.</string>
+		<string name="dropout_first_dissonant_object_1">¡Bien! Ya has restaurado un poco ese caos espacial.</string>
+		<string name="dropout_first_dissonant_object_2">Ahora continua con la mision.</string>
 	</lang>
 </main>

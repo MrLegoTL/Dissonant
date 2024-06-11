@@ -189,6 +189,9 @@ MonoBehaviour:
     - name: change_platform_positions_1
       description: 
       done: 0
+    - name: ObjetoDisonante1_PickUp
+      description: 
+      done: 0
     statistics: []
     achievements: []
   playerPosition: InitialPosition

@@ -101,6 +101,11 @@ public class GameManager : MonoBehaviour
 
         // desactiva la pantalla de pausa
         pauseMenu.alpha = 0f;
+
+        //ocultamos el cursor
+        Cursor.visible = false;
+        //bloqueamos el cursor
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     /// <summary>
