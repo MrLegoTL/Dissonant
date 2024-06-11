@@ -213,42 +213,42 @@ public class DataManager : MonoBehaviour
         }
     }
 
-    public void SaveObjectPositions(string itemName)
-    {
-        data.objectStates = new ObjectState[objects.Length];
+    //public void SaveObjectPositions(string itemName)
+    //{
+    //    data.objectStates = new ObjectState[objects.Length];
 
-        for (int i = 0; i < objects.Length; i++)
-        {
-            GameObject obj = objects[i];
-            ObjectState objectState = new ObjectState
-            {
-                objectName = itemName,
-                posX = obj.transform.position.x,
-                posY = obj.transform.position.y,
-                posZ = obj.transform.position.z
-            };
-            data.objectStates[i] = objectState;
-        }
+    //    for (int i = 0; i < objects.Length; i++)
+    //    {
+    //        GameObject obj = objects[i];
+    //        ObjectState objectState = new ObjectState
+    //        {
+    //            objectName = itemName,
+    //            posX = obj.transform.position.x,
+    //            posY = obj.transform.position.y,
+    //            posZ = obj.transform.position.z
+    //        };
+    //        data.objectStates[i] = objectState;
+    //    }
 
-        Save();
-    }
+    //    Save();
+    //}
 
-    public void LoadObjectPositions()
-    {
-        Load();
+    //public void LoadObjectPositions()
+    //{
+    //    Load();
 
-        if (data.objectStates != null)
-        {
-            foreach (ObjectState objectState in data.objectStates)
-            {
-                GameObject obj = objects.FirstOrDefault(o => o.name == objectState.objectName);
-                if (obj != null)
-                {
-                    obj.transform.position = new Vector3(objectState.posX, objectState.posY, objectState.posZ);
-                }
-            }
-        }
-    }
+    //    if (data.objectStates != null)
+    //    {
+    //        foreach (ObjectState objectState in data.objectStates)
+    //        {
+    //            GameObject obj = objects.FirstOrDefault(o => o.name == objectState.objectName);
+    //            if (obj != null)
+    //            {
+    //                obj.transform.position = new Vector3(objectState.posX, objectState.posY, objectState.posZ);
+    //            }
+    //        }
+    //    }
+    //}
 
 }
 
