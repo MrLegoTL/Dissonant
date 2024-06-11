@@ -58,12 +58,12 @@ public class FPSController : MonoBehaviour
 
     public static Action OnEnterPressed;
 
-    public static FPSController instance;
+    //public static FPSController instance;
 
-    private void Awake()
-    {
-        if (instance == null) instance = this;  
-    }
+    //private void Awake()
+    //{
+    //    if (instance == null) instance = this;  
+    //}
 
     // Start is called before the first frame update
     void Start()

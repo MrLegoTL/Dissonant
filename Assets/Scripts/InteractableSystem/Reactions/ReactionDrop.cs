@@ -29,6 +29,7 @@ public class ReactionDrop : Reaction
 
     public void DropOff()
     {
+        DataManager.instance.SaveObjectPositions(obj.name);
         //Coloca el objeto en la posicion de la mano del jugador
         obj.transform.position = dropPoint.position;
         obj.transform.rotation = dropPoint.rotation;

@@ -11,11 +11,12 @@ public class Data
     public string entrancePoint;
     //array con el estado de todas las condiciones
     public Condition[] allCondition;
-
+    public ItemCondition[] allItemCondition;
     //listado de estadisticas disponibles
     public Stat[] statistics;
     //listado de logro disponibles
     public Achievement[] achievements;
+    public ObjectState[] objectStates;  
 
-    
+
 }

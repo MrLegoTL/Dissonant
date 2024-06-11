@@ -166,6 +166,91 @@ public class DataManager : MonoBehaviour
 
     }
 
-    
+    /// <summary>
+    /// Cambia el estado de una condicion, al estado indicado
+    /// </summary>
+    /// <param name="conditionName"></param>
+    /// <param name="done"></param>
+    public void SetItemCondition(string conditionName, bool done)
+    {
+        //buscamos una condicion, que coincida con el nombre indicado
+        ItemCondition result = data.allItemCondition.Where(c => c.name == conditionName).FirstOrDefault();
+
+        //si escite la condicion
+        if (result != null)
+        {
+            //modificamos us estado asignando el valor indicado
+            result.done = done;
+        }
+        else
+        {
+            Debug.LogWarning(conditionName + " La condicon no exite y no se puede modificar");
+        }
+
+    }
+
+    /// <summary>
+    /// Devuelve el estado en el que se encuentra la condicion recibida como parametro
+    /// </summary>
+    /// <param name="conditionName"></param>
+    /// <returns></returns>
+    public bool CheckItemCondition(string conditionName)
+    {
+        //buscamos la condicion en la lista
+        ItemCondition result = data.allItemCondition.Where(c => c.name == conditionName).FirstOrDefault();
+
+        //si la condicion existe
+        if (result != null)
+        {
+            //devuelvo su estado
+            return result.done;
+        }
+        else
+        {
+            Debug.LogWarning(conditionName + " La condicion no existe y no se puede revisar");
+            //si no existe la condicion, devolvemos un flase
+            return false;
+        }
+    }
+
+    public void SaveObjectPositions(string itemName)
+    {
+        data.objectStates = new ObjectState[objects.Length];
+
+        for (int i = 0; i < objects.Length; i++)
+        {
+            GameObject obj = objects[i];
+            ObjectState objectState = new ObjectState
+            {
+                objectName = itemName,
+                posX = obj.transform.position.x,
+                posY = obj.transform.position.y,
+                posZ = obj.transform.position.z
+            };
+            data.objectStates[i] = objectState;
+        }
+
+        Save();
+    }
+
+    public void LoadObjectPositions()
+    {
+        Load();
+
+        if (data.objectStates != null)
+        {
+            foreach (ObjectState objectState in data.objectStates)
+            {
+                GameObject obj = objects.FirstOrDefault(o => o.name == objectState.objectName);
+                if (obj != null)
+                {
+                    obj.transform.position = new Vector3(objectState.posX, objectState.posY, objectState.posZ);
+                }
+            }
+        }
+    }
 
 }
+
+
+
