@@ -20,6 +20,7 @@ public class DataManager : MonoBehaviour
     //combinacion de ruta + nombre de archivo
     private string dataPath;
     public bool staticPlayer = false;
+    public bool staticDron = false;
     //singleton
     public static DataManager instance;
 

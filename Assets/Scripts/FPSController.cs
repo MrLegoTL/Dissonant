@@ -87,7 +87,7 @@ public class FPSController : MonoBehaviour
         InteractWithObject();
         IndicatorDisplay();
 
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             OnEnterPressed?.Invoke();
         }
@@ -121,10 +121,10 @@ public class FPSController : MonoBehaviour
         //limitamos la rotacion para qu esolo pueda tener valores entre -90 y 90 grados
         rotationVertical = Mathf.Clamp(rotationVertical, -90f, 90f);
 
-        if (Input.GetButtonDown("Jump"))
-        {
-            Jump();
-        }
+        //if (Input.GetButtonDown("Jump"))
+        //{
+        //    Jump();
+        //}
         if(Input.GetKeyDown(KeyCode.E) && currentInteractable !=null)
         {
             currentInteractable.Interact();
@@ -184,17 +184,17 @@ public class FPSController : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Realiza el salto cambiando la velocidad vertical
-    /// </summary>
-    private void Jump()
-    {
-        //cambiamos el valor de la velocidad vertical, para que se aplique la siguiente iteración
-        if (player.isGrounded)
-        {
-            verticalV = jumpForce;
-        }
-    }
+    ///// <summary>
+    ///// Realiza el salto cambiando la velocidad vertical
+    ///// </summary>
+    //private void Jump()
+    //{
+    //    //cambiamos el valor de la velocidad vertical, para que se aplique la siguiente iteración
+    //    if (player.isGrounded)
+    //    {
+    //        verticalV = jumpForce;
+    //    }
+    //}
 
     private void InteractWithObject()
     {
