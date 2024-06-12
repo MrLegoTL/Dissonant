@@ -134,7 +134,7 @@ public class InteractableObjects : MonoBehaviour
         }
         //iniciamos la cadena de reacciones
         NextReaction();
-        return;
+        //return;
     }
     /// <summary>
     /// Pone en cola las reacciones qu ehayan sido configuradas en el contenedor proporcionado

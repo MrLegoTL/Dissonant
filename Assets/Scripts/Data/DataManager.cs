@@ -19,6 +19,7 @@ public class DataManager : MonoBehaviour
     public string fileName = "data.dat";
     //combinacion de ruta + nombre de archivo
     private string dataPath;
+    public bool staticPlayer = false;
     //singleton
     public static DataManager instance;
 

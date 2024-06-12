@@ -9,5 +9,6 @@ public class ReactionPlayer : Reaction
     protected override void React()
     {
         player.enabled = true;
+        DataManager.instance.staticPlayer = true;
     }
 }

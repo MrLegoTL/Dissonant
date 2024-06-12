@@ -70,7 +70,10 @@ public class FPSController : MonoBehaviour
     {
         SceneInitialPosition();
         ObjectInHand();
-
+        if (DataManager.instance.staticPlayer)
+        {
+            player.enabled = true;
+        }
     }
 
     // Update is called once per frame

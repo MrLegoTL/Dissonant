@@ -22196,6 +22196,7 @@ MonoBehaviour:
   - {fileID: 656813320180579026, guid: 1ea621fccdf9ea04e8a4fb6be273cfff, type: 3}
   - {fileID: 334450903052052189, guid: f8e54e7ded01d954b9ba99cb8a3e0e50, type: 3}
   fileName: data.dat
+  staticPlayer: 0
 --- !u!4 &1374966633
 Transform:
   m_ObjectHideFlags: 0
@@ -23013,6 +23014,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8274491063651442756, guid: 7070af19f92937b4f9370e350eb6cd96, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394658365656522790, guid: 7070af19f92937b4f9370e350eb6cd96, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -31102,7 +31107,7 @@ Transform:
   m_GameObject: {fileID: 2126143350}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.342, y: 1.935, z: 2.461}
+  m_LocalPosition: {x: -0.342, y: 1.935, z: 2.543}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -31919,10 +31924,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueCrystal
       objectReference: {fileID: 0}
+    - target: {fileID: 656813320180579026, guid: 1ea621fccdf9ea04e8a4fb6be273cfff, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 656813320180579026, guid: 1ea621fccdf9ea04e8a4fb6be273cfff, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 789797449631008347, guid: 1ea621fccdf9ea04e8a4fb6be273cfff, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2168381723228636242, guid: 1ea621fccdf9ea04e8a4fb6be273cfff, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1330794246}
+    - target: {fileID: 2663734420026708044, guid: 1ea621fccdf9ea04e8a4fb6be273cfff, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2695629194337163715, guid: 1ea621fccdf9ea04e8a4fb6be273cfff, type: 3}
       propertyPath: handPlayer
       value: 
@@ -32027,6 +32048,10 @@ PrefabInstance:
       propertyPath: handPlayer
       value: 
       objectReference: {fileID: 1512882459}
+    - target: {fileID: 9176351830460723912, guid: 1ea621fccdf9ea04e8a4fb6be273cfff, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4806950213887949627, guid: 1ea621fccdf9ea04e8a4fb6be273cfff, type: 3}
     m_RemovedGameObjects: []
