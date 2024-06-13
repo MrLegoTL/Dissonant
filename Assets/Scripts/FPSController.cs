@@ -55,6 +55,8 @@ public class FPSController : MonoBehaviour
     public Image spot;
     public Image hand;
 
+    public GameObject handObject;
+    public string handObjectName;
 
     public static Action OnEnterPressed;
 
@@ -272,7 +274,11 @@ public class FPSController : MonoBehaviour
     {
         if (DataManager.instance.CheckObjectInHand() == null) return;
         GameObject temp = Instantiate(DataManager.instance.CheckObjectInHand(), handToObject.position, DataManager.instance.CheckObjectInHand().transform.rotation);
-        temp.transform.parent = handToObject;       
+        temp.transform.parent = handToObject;  
+        
+        handObject = temp;
+        handObjectName = temp.name;
+        handObjectName = DataManager.instance.objectInHandName;
         
     }
   

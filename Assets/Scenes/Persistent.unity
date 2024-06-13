@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 262.33694, g: 325.04984, b: 430.2193, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -205,7 +205,13 @@ MonoBehaviour:
       description: 
       done: 0
     allItemCondition:
-    - name: 
+    - name: PositionRedCrystal
+      description: 
+      done: 0
+    - name: PositionBlueCrystal
+      description: 
+      done: 0
+    - name: DisonantObject1_Drop
       description: 
       done: 0
     statistics: []
@@ -221,6 +227,11 @@ MonoBehaviour:
       posY: 0
       posZ: 0
       picked: 0
+    - objectName: ObjetoDisonante1
+      posX: 0
+      posY: 0
+      posZ: 0
+      picked: 0
   playerPosition: InitialPosition
   objectInHandName: 
   objects:
@@ -229,6 +240,8 @@ MonoBehaviour:
   - {fileID: 334450903052052189, guid: f8e54e7ded01d954b9ba99cb8a3e0e50, type: 3}
   fileName: data.dat
   staticPlayer: 0
+  staticDron: 0
+  player: {fileID: 0}
 --- !u!4 &735284944
 Transform:
   m_ObjectHideFlags: 0

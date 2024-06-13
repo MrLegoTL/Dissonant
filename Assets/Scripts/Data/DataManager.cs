@@ -21,6 +21,7 @@ public class DataManager : MonoBehaviour
     private string dataPath;
     public bool staticPlayer = false;
     public bool staticDron = false;
+    public FPSController player;
     //singleton
     public static DataManager instance;
 
@@ -53,7 +54,7 @@ public class DataManager : MonoBehaviour
 
     void Start()
     {
-        
+        player  =FindObjectOfType<FPSController>();
     }
 
     /// <summary>
