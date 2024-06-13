@@ -8,19 +8,21 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: cfxr proc ring water ripple local space ab
-  m_Shader: {fileID: -6465566751694194690, guid: 1581eccce46ba384596a1dce7936ab19,
-    type: 3}
-  m_ValidKeywords:
-  - _CFXR_DISSOLVE
-  - _CFXR_WORLD_SPACE_RING
+  m_Shader: {fileID: 200, guid: 0000000000000000f000000000000000, type: 0}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
   m_InvalidKeywords:
+  - _CFXR_DISSOLVE
   - _CFXR_DITHERED_SHADOWS_OFF
+  - _CFXR_WORLD_SPACE_RING
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -33,7 +35,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: e58503026c7eb45498f82668dbd6294c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
@@ -43,6 +45,7 @@ Material:
     - _DstBlend: 10
     - _HdrBoost: 0
     - _HdrMultiply: 4
+    - _InvFade: 1
     - _InvertDissolveTex: 0
     - _RingTopOffset: 0.07
     - _ShadowStrength: 1
@@ -56,4 +59,5 @@ Material:
     - _WorldSpaceRing: 1
     m_Colors:
     - _Debug: {r: 0, g: 0, b: 0, a: 0}
+    - _TintColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
   m_BuildTextureStacks: []
