@@ -220,6 +220,12 @@ MonoBehaviour:
     - name: DisonantObject2_Drop
       description: 
       done: 0
+    - name: Activate_Lights_Portal_1
+      description: 
+      done: 0
+    - name: Activate_Lights_Portal_2
+      description: 
+      done: 0
     statistics: []
     achievements: []
     objectStates:
