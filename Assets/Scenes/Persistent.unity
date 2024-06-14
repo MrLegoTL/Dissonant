@@ -204,6 +204,9 @@ MonoBehaviour:
     - name: Plant_Lighted_4
       description: 
       done: 0
+    - name: ObjetoDisonante2_PickUp
+      description: 
+      done: 0
     allItemCondition:
     - name: PositionRedCrystal
       description: 
@@ -212,6 +215,9 @@ MonoBehaviour:
       description: 
       done: 0
     - name: DisonantObject1_Drop
+      description: 
+      done: 0
+    - name: DisonantObject2_Drop
       description: 
       done: 0
     statistics: []
@@ -232,12 +238,18 @@ MonoBehaviour:
       posY: 0
       posZ: 0
       picked: 0
+    - objectName: ObjetoDisonante2
+      posX: 0
+      posY: 0
+      posZ: 0
+      picked: 0
   playerPosition: InitialPosition
   objectInHandName: 
   objects:
   - {fileID: 7901038046059384752, guid: 01668cf32b82ab8439ad509bf37f27dd, type: 3}
   - {fileID: 656813320180579026, guid: 1ea621fccdf9ea04e8a4fb6be273cfff, type: 3}
   - {fileID: 334450903052052189, guid: f8e54e7ded01d954b9ba99cb8a3e0e50, type: 3}
+  - {fileID: 5421419813716177021, guid: 9b9132349bcf5ff48b728fd8abef3de2, type: 3}
   fileName: data.dat
   staticPlayer: 0
   staticDron: 0

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -27,6 +28,8 @@ public class StateController : MonoBehaviour
         if (DataManager.instance.staticDron)
         {
             navMeshAgent.enabled = true;
+            aiActive = true;
+            animator.SetTrigger("WakeUp");
         }
     }
 
@@ -39,6 +42,8 @@ public class StateController : MonoBehaviour
         currentState.UpdateState(this);
         DetectPlayer();
     }
+
+   
 
     void DetectPlayer()
     {
