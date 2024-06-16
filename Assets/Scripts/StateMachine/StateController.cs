@@ -21,7 +21,11 @@ public class StateController : MonoBehaviour
 
     [Header("DetectPlayer")]
     public float detectionRadius = 5f;
+    public float raycastMaxDistance = 2f;
+    public float offsetDistance = 1f;
     public LayerMask detectionLayer;
+
+    
 
     private void Start()
     {
@@ -48,10 +52,10 @@ public class StateController : MonoBehaviour
     void DetectPlayer()
     {
         // Posición del objeto desde donde se lanza el SphereCast
-        Vector3 origin = transform.position;
+        Vector3 origin = transform.position + transform.forward  * offsetDistance;
 
         // Realiza el SphereCast
-        RaycastHit[] hits = Physics.SphereCastAll(origin, detectionRadius, transform.forward, 0f, detectionLayer);
+        RaycastHit[] hits = Physics.SphereCastAll(origin, detectionRadius, transform.forward, raycastMaxDistance, detectionLayer);
 
         foreach (var hit in hits)
         {
@@ -62,6 +66,7 @@ public class StateController : MonoBehaviour
                 Debug.Log("Jugador detectado, NavMeshAgent desactivado.");
                 return;
             }
+            
         }
 
         // Si no se detecta al jugador, activa el NavMeshAgent
@@ -69,8 +74,10 @@ public class StateController : MonoBehaviour
     }
     void OnDrawGizmosSelected()
     {
+        Vector3 origin = transform.position + transform.forward * offsetDistance;
         // Dibujar el SphereCast en la escena para visualización
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, detectionRadius);
+        Gizmos.DrawWireSphere(origin, detectionRadius);
+        Gizmos.DrawLine(origin, origin + transform.forward * raycastMaxDistance);
     }
 }

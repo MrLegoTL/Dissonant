@@ -9,6 +9,7 @@ TagManager:
   - PickUp
   - Door
   - Platform
+  - Dron
   layers:
   - Default
   - TransparentFX

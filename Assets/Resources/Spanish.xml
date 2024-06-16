@@ -11,12 +11,23 @@
 		<string name="pickup_firts_energy_crystal_1">¡Oh! Has econtrado un cristal de energia.</string>
 		<string name="pickup_firts_energy_crystal_2">Con esto podrás activar un portal. Ahora busca donde colocar el cristal.</string>
 		<string name="dropout_firts_energy_crystal_1">¡Estupendo! Has activado un portal.</string>
-		<string name="dropout_firts_energy_crystal_2">Atraviesalo y trae de vuelrta el objeto disonantes.</string>
+		<string name="dropout_firts_energy_crystal_2">Atraviesalo y trae de vuelta el objeto disonante.</string>
     <string name="dropped_energy_crystal">Ya has colocado el cristal de energia.</string>
     <string name="panel_interact_first_contact_1">Vaya parace que al interactuar con estos botones las plataformas se mueven.</string>
     <string name="panel_interact_first_contact_2">No me extraña aqui vivian seres muy ingeniosos.</string>
     <string name="object_in_hand">Ya llevas un objeto en la mano.</string>
 		<string name="dropout_first_dissonant_object_1">¡Bien! Ya has restaurado un poco ese caos espacial.</string>
 		<string name="dropout_first_dissonant_object_2">Ahora continua con la mision.</string>
+    <string name="amateratsu_1">¡Bienvenido a Amateratsu!</string>
+    <string name="amateratsu_2">Un mundo de fantasía de neón, sus habitantes eran seres ingeniosos.</string>
+    <string name="amateratsu_3">Suerte en la búsqueda del objeto disonante.</string>
+    <string name="blossom_1">¡Bienvenido a Blossom!</string>
+    <string name="blossom_2">Un mundo predomina la vegetación y cada planta tiene una función</string>
+    <string name="blossom_3">Los habitantes no estaban muy desarrolladon pero controlaban la vegetación</string>
+    <string name="blosoom_4">Basta ya de chácharas. Buena suerte en la búsqueda del objeto disonante.</string>
+    <string name="plant_first_contact">Parecen que esta planta actua como un globo y cuando extallan activan una planta gigantesca que emite luz.</string>
+    <string name="try_pickup_dissonant_object">Parece que hace falta algo.</string>
+    <string name="pickup_dissonant_object_1">Enhorabuena, has encontrado el objeto disonante.</string>
+    <string name="pickup_dissonant_object_2">Ahora vuelve a la base y colocalo en la sala disonancia.</string>
 	</lang>
 </main>
