@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 735284944}
   - component: {fileID: 735284943}
+  - component: {fileID: 735284945}
   m_Layer: 0
   m_Name: DataManager
   m_TagString: Untagged
@@ -232,8 +233,32 @@ MonoBehaviour:
     - name: blossom
       description: 
       done: 0
-    statistics: []
-    achievements: []
+    statistics:
+    - code: dron
+      value: 0
+    - code: plant
+      value: 0
+    - code: portal
+      value: 0
+    achievements:
+    - name: Dron
+      statCode: dron
+      imageName: Dron
+      description: Habla con el Dron 3 veces
+      targetAmount: 3
+      unlocked: 0
+    - name: "Bot\xE1nico"
+      statCode: plant
+      imageName: Plant
+      description: Interactua con 10 plantas de Blossom
+      targetAmount: 10
+      unlocked: 0
+    - name: Viaje Dimensional
+      statCode: portal
+      imageName: Portal
+      description: Atraviesa los portales 6 veces
+      targetAmount: 6
+      unlocked: 0
     objectStates:
     - objectName: RedCrystal
       posX: 0
@@ -281,6 +306,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &735284945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735284942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e44954e65f398f74086c88ff5c5c849b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1029352748
 GameObject:
   m_ObjectHideFlags: 0

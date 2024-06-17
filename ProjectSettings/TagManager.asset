@@ -10,6 +10,9 @@ TagManager:
   - Door
   - Platform
   - Dron
+  - FxTemporaire
+  - SoundEffectsSlider
+  - MusicVolumeSlider
   layers:
   - Default
   - TransparentFX

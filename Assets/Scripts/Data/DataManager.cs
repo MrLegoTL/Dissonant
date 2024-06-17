@@ -7,6 +7,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 //PARA PODER FILTRAR LOS ARRAYS
 using System.Linq;
+using System;
 
 public class DataManager : MonoBehaviour
 {
@@ -22,6 +23,11 @@ public class DataManager : MonoBehaviour
     public bool staticPlayer = false;
     public bool staticDron = false;
     public FPSController player;
+
+    [Header("Achiviement")]
+    public static Action onInteractDron;
+    public static Action onInteractPlants;
+    public static Action onDimensionTravel;
     //singleton
     public static DataManager instance;
 
@@ -216,6 +222,7 @@ public class DataManager : MonoBehaviour
         }
     }
 
+    
     //public void SaveObjectPositions(string itemName)
     //{
     //    data.objectStates = new ObjectState[objects.Length];

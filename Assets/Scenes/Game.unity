@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.000014072286, g: 0.00045710645, b: 0.000100877616, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19030,6 +19030,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 359539285}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &928835125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 928835126}
+  - component: {fileID: 928835127}
+  m_Layer: 6
+  m_Name: ReactionInteractDronAchiviement
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &928835126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928835125}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1946227912}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &928835127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928835125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b39ef728c019b24db761f2ed5edc75a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 
+  delay: 0
+  delayCounter: 0
+  interactable: {fileID: 0}
 --- !u!33 &929256527
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -31411,6 +31459,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1374966633}
   - component: {fileID: 1374966632}
+  - component: {fileID: 1374966634}
   m_Layer: 0
   m_Name: DataManager
   m_TagString: Untagged
@@ -31477,8 +31526,16 @@ MonoBehaviour:
     - name: PositionBlueCrystal
       description: 
       done: 0
-    statistics: []
-    achievements: []
+    statistics:
+    - code: dron
+      value: 0
+    achievements:
+    - name: Dron
+      statCode: dron
+      imageName: Dron
+      description: Habla con el Dron 3 veces
+      targetAmount: 3
+      unlocked: 0
     objectStates:
     - objectName: RedCrystal
       posX: 0
@@ -31520,6 +31577,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1374966634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374966631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e44954e65f398f74086c88ff5c5c849b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!225 &1378807453 stripped
 CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 4068005618604407672, guid: 7070af19f92937b4f9370e350eb6cd96, type: 3}
@@ -32579,6 +32648,14 @@ PrefabInstance:
     - target: {fileID: 8394658365656522790, guid: 7070af19f92937b4f9370e350eb6cd96, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8465809819965009064, guid: 7070af19f92937b4f9370e350eb6cd96, type: 3}
+      propertyPath: m_TagString
+      value: SoundEffectsSlider
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952045450090422995, guid: 7070af19f92937b4f9370e350eb6cd96, type: 3}
+      propertyPath: m_TagString
+      value: MusicVolumeSlider
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -41494,6 +41571,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4520771839008156409, guid: a1a8697157ded93489948332433937ec, type: 3}
   m_PrefabInstance: {fileID: 1942457136}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1946227912 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9096836977165841636, guid: 6def1f58483905b468590d289f8fdab2, type: 3}
+  m_PrefabInstance: {fileID: 3994347840445223587}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1949318091 stripped
 Transform:
@@ -59840,7 +59922,10 @@ PrefabInstance:
       objectReference: {fileID: 1346603819}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 9096836977165841636, guid: 6def1f58483905b468590d289f8fdab2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 928835126}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6def1f58483905b468590d289f8fdab2, type: 3}
 --- !u!1001 &4049685346540313605

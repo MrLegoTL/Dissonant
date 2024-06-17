@@ -13,6 +13,7 @@ public class ReactionScene : Reaction
         DataManager.instance.playerPosition = positionInScene;
         SceneController.instance.FadeAndLoadScene(sceneName);
         GameManager.instance.ChangeMusicScenes(sceneName);
+        DataManager.onDimensionTravel?.Invoke();
        
         
     }

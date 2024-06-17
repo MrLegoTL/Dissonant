@@ -17,7 +17,7 @@ public class AchievementDisplay : MonoBehaviour
     {
         Achievement result = DataManager.instance.data.achievements.Where(a => a.name == achievementName).FirstOrDefault();
 
-        //image.sprite = Resources.Load<Sprite>("AchievementSprites/" + result.imageName);
+        image.sprite = Resources.Load<Sprite>("AchievementSprites/" + result.imageName);
         name.text = result.name;
         description.text = result.description;
         //si esta desbloqueado dessctivamos la sombra

@@ -57,6 +57,10 @@ public class GameManager : MonoBehaviour
         {
             SoundManager.instance.WorldAmateratsu();
         }
+        else if(scene == "World2")
+        {
+            SoundManager.instance.WorldBlossom();
+        }
     }
 
     /// <summary>

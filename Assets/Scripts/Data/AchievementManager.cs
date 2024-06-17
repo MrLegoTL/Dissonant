@@ -16,6 +16,10 @@ public class AchievementManager : MonoBehaviour
         //suscripcion al metodo de muerte del enemigo mediante el uso de un método anónimo
         //tened en cuenta que este metodo no podra ser DESUSCRITO por lo que debera utilizarse 
         //en clases que sean persistentes en nuestro proyecto
+
+        DataManager.onInteractDron += () => IncreaseStatAndCheckAchiviement("dron", 1);
+        DataManager.onInteractPlants += () => IncreaseStatAndCheckAchiviement("plant", 1);
+        DataManager.onDimensionTravel += () => IncreaseStatAndCheckAchiviement("portal", 1);
     }
 
     /// <summary>
