@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 //PARA PODER LEER EL XML
 using System.Xml;
+using UnityEngine.UI;
+using TMPro;
 
 public class TranslateManager : MonoBehaviour
 {
@@ -12,17 +14,38 @@ public class TranslateManager : MonoBehaviour
     public Dictionary<string, string> strings;
 
     public static TranslateManager instance;
+    
 
     private void Awake()
     {
-        if (instance == null) instance = this;
+        if (instance == null)
+        {
+            instance = this;
+            //indicamos que el gameobject no sera destruido entre escenas
+            DontDestroyOnLoad(gameObject);
+        }
+
+        //si se trata de una instancia distinta a la cual
+        else if (instance != this)
+        {
+            //la destruimos
+            Destroy(gameObject);
+        }
     }
 
     // Start is called before the first frame update
     void Start()
     {
         //recuperamos el lenguaje del sistema operativo
-        string language = Application.systemLanguage.ToString();
+        //string language = Application.systemLanguage.ToString();
+
+        // Cargar el idioma predeterminado al inicio
+        LoadLanguage(Application.systemLanguage.ToString());
+
+    }
+
+    public void LoadLanguage(string language)
+    {
         //intentamos recuperar el archivo xml con el idioma del sistema
         TextAsset textAsset = (TextAsset)Resources.Load(language, typeof(TextAsset));
 
@@ -40,8 +63,7 @@ public class TranslateManager : MonoBehaviour
         //llamamos al metido que carga los literales en el diccionario a partir del xml
         SetLanguage(xml);
     }
-
-
+   
 
     /// <summary>
     /// Carga todas las strings contenidas en el xml dentro  del  diccionario
@@ -86,5 +108,18 @@ public class TranslateManager : MonoBehaviour
 
         //si llegamos hast aqui tenemos la seguridad de que existe elemento en el diccionario
         return strings[name];
+    }
+
+    /// <summary>
+    /// Método que cambia el idioma basado en la opción seleccionada en el menú desplegable.
+    /// </summary>
+    /// <param name="dropdown"></param>
+    public void OnLanguageChange(TMP_Dropdown dropdown)
+    {
+        string selectedLanguage = dropdown.options[dropdown.value].text;
+        LoadLanguage(selectedLanguage);
+        defaultLanguage = selectedLanguage;
+        Debug.Log(selectedLanguage);
+
     }
 }

@@ -233,6 +233,9 @@ MonoBehaviour:
     - name: blossom
       description: 
       done: 0
+    - name: sala_disonancia
+      description: 
+      done: 0
     statistics:
     - code: dron
       value: 0

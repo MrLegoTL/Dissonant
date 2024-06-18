@@ -16,18 +16,22 @@
     <string name="panel_interact_first_contact_1">Vaya parace que al interactuar con estos botones las plataformas se mueven.</string>
     <string name="panel_interact_first_contact_2">No me extraña aqui vivian seres muy ingeniosos.</string>
     <string name="object_in_hand">Ya llevas un objeto en la mano.</string>
-		<string name="dropout_first_dissonant_object_1">¡Bien! Ya has restaurado un poco ese caos espacial.</string>
-		<string name="dropout_first_dissonant_object_2">Ahora continua con la mision.</string>
+		<string name="dropout_first_dissonant_object_1">¡Bien! Ya has restaurado un poco de ese caos espacial.</string>
+		<string name="dropout_first_dissonant_object_2">Ahora continua con la misión.</string>
     <string name="amateratsu_1">¡Bienvenido a Amateratsu!</string>
     <string name="amateratsu_2">Un mundo de fantasía de neón, sus habitantes eran seres ingeniosos.</string>
     <string name="amateratsu_3">Suerte en la búsqueda del objeto disonante.</string>
     <string name="blossom_1">¡Bienvenido a Blossom!</string>
-    <string name="blossom_2">Un mundo predomina la vegetación y cada planta tiene una función</string>
-    <string name="blossom_3">Los habitantes no estaban muy desarrolladon pero controlaban la vegetación</string>
+    <string name="blossom_2">En este mundo predomina la vegetación y cada planta tiene una función</string>
+    <string name="blossom_3">Los habitantes no estaban muy desarrollados pero controlaban la vegetación</string>
     <string name="blosoom_4">Basta ya de chácharas. Buena suerte en la búsqueda del objeto disonante.</string>
     <string name="plant_first_contact">Parecen que esta planta actua como un globo y cuando extallan activan una planta gigantesca que emite luz.</string>
     <string name="try_pickup_dissonant_object">Parece que hace falta algo.</string>
     <string name="pickup_dissonant_object_1">Enhorabuena, has encontrado el objeto disonante.</string>
     <string name="pickup_dissonant_object_2">Ahora vuelve a la base y colocalo en la sala disonancia.</string>
+    <string name="dissonant_zone_1">Esta es la sala disonancia.</string>
+    <string name="dissonant_zone_2">Aquí es donde se debe colocar los objetos disonantes, una vez los hayas encontrados.</string>
+    <string name="dropout_second_dissonant_object_1">¡Estupendo! Has traido de vuelta todos los objetos disonantes.</string>
+    <string name="dropout_second_dissonant_object_2">Ven aqui a hablar conmigo para finalizar la misión.</string>
 	</lang>
 </main>

@@ -483,7 +483,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 7b9de8a991a2c6846a77bb5abbabc5a7, type: 2}
+        m_TargetAssemblyTypeName: TranslateButton, Assembly-CSharp
+        m_MethodName: ChangeLanguages
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!1 &955880190771592365
 GameObject:
@@ -1252,6 +1264,7 @@ GameObject:
   - component: {fileID: 6262872670354202186}
   - component: {fileID: 3643704010331581231}
   - component: {fileID: 404106548434712244}
+  - component: {fileID: 915464048335400181}
   m_Layer: 5
   m_Name: TitleMusic
   m_TagString: Untagged
@@ -1375,6 +1388,21 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &915464048335400181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777779887682539436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e02daeb01f9ad7042893ccfc6080c619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 0}
+  spanishText: "M\xFAsica"
+  englishText: Music
 --- !u!1 &2017548382754312591
 GameObject:
   m_ObjectHideFlags: 0
@@ -1463,6 +1491,7 @@ GameObject:
   - component: {fileID: 2848662134161432204}
   - component: {fileID: 1871210154868187353}
   - component: {fileID: 2391802746607268216}
+  - component: {fileID: 3187175259598808835}
   m_Layer: 5
   m_Name: TitlePause
   m_TagString: Untagged
@@ -1586,6 +1615,21 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3187175259598808835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2253817787661040141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e02daeb01f9ad7042893ccfc6080c619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 0}
+  spanishText: Pausa
+  englishText: Pause
 --- !u!1 &2256824361605902862
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,6 +1641,7 @@ GameObject:
   - component: {fileID: 6911408171399996169}
   - component: {fileID: 795244035125736081}
   - component: {fileID: 181736939672276154}
+  - component: {fileID: 9218747772725755791}
   m_Layer: 5
   m_Name: TitleOptions
   m_TagString: Untagged
@@ -1720,6 +1765,21 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &9218747772725755791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2256824361605902862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e02daeb01f9ad7042893ccfc6080c619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 0}
+  spanishText: Opciones
+  englishText: Options
 --- !u!1 &2349105470048464969
 GameObject:
   m_ObjectHideFlags: 0
@@ -2346,6 +2406,7 @@ GameObject:
   - component: {fileID: 2372964215655227267}
   - component: {fileID: 7563002866977625096}
   - component: {fileID: 3096356932825350434}
+  - component: {fileID: 3820269953607892357}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2469,6 +2530,21 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3820269953607892357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2994452636384967931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e02daeb01f9ad7042893ccfc6080c619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 0}
+  spanishText: Volver al Menu
+  englishText: Main Menu
 --- !u!1 &3203749494590009228
 GameObject:
   m_ObjectHideFlags: 0
@@ -2555,6 +2631,7 @@ GameObject:
   - component: {fileID: 8868837887444307741}
   - component: {fileID: 4865532929918489706}
   - component: {fileID: 1298629723956724128}
+  - component: {fileID: 7961759984540038744}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2678,6 +2755,21 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7961759984540038744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3230364773870733752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e02daeb01f9ad7042893ccfc6080c619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 0}
+  spanishText: Opciones
+  englishText: Options
 --- !u!1 &3330909893599983603
 GameObject:
   m_ObjectHideFlags: 0
@@ -3766,6 +3858,7 @@ GameObject:
   - component: {fileID: 4167102913838921080}
   - component: {fileID: 3406969583493597792}
   - component: {fileID: 1570350947623604457}
+  - component: {fileID: 2185046931253206361}
   m_Layer: 5
   m_Name: TitleSound
   m_TagString: Untagged
@@ -3889,6 +3982,21 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2185046931253206361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5665271582329364768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e02daeb01f9ad7042893ccfc6080c619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 0}
+  spanishText: Sonidos FX
+  englishText: Sounds FX
 --- !u!1 &5685006552621461513
 GameObject:
   m_ObjectHideFlags: 0
@@ -4062,6 +4170,7 @@ GameObject:
   - component: {fileID: 8876764092619398092}
   - component: {fileID: 499483436750295168}
   - component: {fileID: 7904236186933772655}
+  - component: {fileID: 6728657019707563691}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -4185,6 +4294,21 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6728657019707563691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6074691783088526921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e02daeb01f9ad7042893ccfc6080c619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 0}
+  spanishText: Reanudar
+  englishText: Resume
 --- !u!1 &6457226815025358847
 GameObject:
   m_ObjectHideFlags: 0
@@ -4620,6 +4744,7 @@ GameObject:
   - component: {fileID: 1452336372077306146}
   - component: {fileID: 5135784969051159377}
   - component: {fileID: 3060795539723255823}
+  - component: {fileID: 5995100069430394103}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -4743,6 +4868,21 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5995100069430394103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7097308077705573967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e02daeb01f9ad7042893ccfc6080c619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 0}
+  spanishText: Reiniciar
+  englishText: Restart
 --- !u!1 &7114715806147919971
 GameObject:
   m_ObjectHideFlags: 0
@@ -4837,6 +4977,7 @@ GameObject:
   - component: {fileID: 3132458871473564078}
   - component: {fileID: 856910632366086882}
   - component: {fileID: 8695456727133200368}
+  - component: {fileID: 5004009701814736784}
   m_Layer: 5
   m_Name: TitleLanguage
   m_TagString: Untagged
@@ -4960,6 +5101,21 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5004009701814736784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7310957736812967670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e02daeb01f9ad7042893ccfc6080c619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 0}
+  spanishText: Idioma
+  englishText: Language
 --- !u!1 &7462942072999889776
 GameObject:
   m_ObjectHideFlags: 0
@@ -5083,6 +5239,7 @@ GameObject:
   - component: {fileID: 7867260911223284944}
   - component: {fileID: 8561775801407278181}
   - component: {fileID: 3879991394634611922}
+  - component: {fileID: 3555616247116941316}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -5206,6 +5363,21 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3555616247116941316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8019553484126498810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e02daeb01f9ad7042893ccfc6080c619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 0}
+  spanishText: Volver
+  englishText: Back
 --- !u!1 &8048806528686503512
 GameObject:
   m_ObjectHideFlags: 0
@@ -5764,7 +5936,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ChangeMusicScenes
+        m_MethodName: MainMenu
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

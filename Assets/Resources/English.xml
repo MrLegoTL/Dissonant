@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<main>
+	<lang>
+		<string name="dron_first_contact_1"> Hello astronaut A3008, welcome to the Mercury space station.</string>
+		<string name="dron_first_contact_2">I will explain your mission. You must find the dissonate objects from different worlds.</string>
+		<string name="dron_first_contact_3">I hope you don't get a bout of insanity like the former astronaut.</string>
+		<string name="dron_first_contact_4">He left the objects in different worlds and deactivated the portals that lead to them.</string>
+		<string name="dron_first_contact_5">As these objects do not belong to their worlds they are causing spatial chaos.</string>
+		<string name="dron_first_contact_6">Therefore, your mission is to go to those worlds and bring back the dissonant objects.</string>
+		<string name="dron_after_first_contact">Bring back dissonant objects.</string>
+		<string name="pickup_firts_energy_crystal_1">Oh! You have found an energy crystal.</string>
+		<string name="pickup_firts_energy_crystal_2">With this you will be able to activate a portal. Now find where to place the crystal.</string>
+		<string name="dropout_firts_energy_crystal_1">Great! You have activated a portal.</string>
+		<string name="dropout_firts_energy_crystal_2">Go through it and bring back the dissonant object.</string>
+    <string name="dropped_energy_crystal">You have already placed the energy crystal.</string>
+    <string name="panel_interact_first_contact_1">It seems that when interacting with these buttons the platforms move.</string>
+    <string name="panel_interact_first_contact_2">No wonder here lived very ingenious beings.</string>
+    <string name="object_in_hand">You are already carrying an object in your hand.</string>
+		<string name="dropout_first_dissonant_object_1">Good! You've already restored some of that space chaos.</string>
+		<string name="dropout_first_dissonant_object_2">Now continue with the mission.</string>
+    <string name="amateratsu_1">Welcome to Amateratsu!</string>
+    <string name="amateratsu_2">A neon fantasy world, its inhabitants were ingenious beings.</string>
+    <string name="amateratsu_3">Good luck in the search for the dissonant object.</string>
+    <string name="blossom_1">Welcome to Blossom!</string>
+    <string name="blossom_2">In this world, vegetation predominates and each plant has a function.</string>
+    <string name="blossom_3">The inhabitants were not very developed but controlled the vegetation.</string>
+    <string name="blosoom_4">Enough chitchat. Good luck in your search for the dissonant object.</string>
+    <string name="plant_first_contact">It seems that this plant acts like a balloon and when it bursts, it activates a gigantic plant that emits light.</string>
+    <string name="try_pickup_dissonant_object">Something seems to be missing.</string>
+    <string name="pickup_dissonant_object_1">Congratulations, you have found the dissonant object.</string>
+    <string name="pickup_dissonant_object_2">Now go back to the base and place it in the dissonance room.</string>
+    <string name="dissonant_zone_1">This is the dissonance room.</string>
+    <string name="dissonant_zone_2">This is where you should place the dissonant objects, once you have found them.</string>
+    <string name="dropout_second_dissonant_object_1">Great! You have brought back all the dissonant objects.</string>
+    <string name="dropout_second_dissonant_object_2">Come here to talk to me to finish the mission.</string>
+	</lang>
+</main>
