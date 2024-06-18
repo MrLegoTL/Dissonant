@@ -43,27 +43,16 @@ public class SoundManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            //esto hara que la instancia no sea destruida entre escenas
-            DontDestroyOnLoad(gameObject);
+            
         }
-        else
-        {
-            // en caso de que ya exista una instancia, para evitar solapamientos, autodestruiremos la nueva instancia
-            Destroy(gameObject);
-        }
-
+        
         
         
     }
 
     void Start()
     {
-        // Asegurarse de que los sliders estén asignados correctamente en el inspector
-        if (musicVolumeSlider == null || soundEffectsSlider == null)
-        {
-            Debug.LogError("Los sliders no están asignados en el inspector.");
-            return;
-        }
+        
         
         UpdateSliders();
     }
@@ -158,7 +147,7 @@ public class SoundManager : MonoBehaviour
     public void SetSound(float volume)
     {
         audioMixer.SetFloat("Sounds", Mathf.Log10(volume) * 20);
-        PlayerPrefs.SetFloat("Sounds", volume);
+       
     }
 
     /// <summary>
@@ -168,7 +157,7 @@ public class SoundManager : MonoBehaviour
     public void SetMusic(float volume)
     {
         audioMixer.SetFloat("Music", Mathf.Log10(volume) * 20);
-        PlayerPrefs.SetFloat("Music", volume);
+        
     }
 
     // Método para manejar el cambio de valor del slider de música

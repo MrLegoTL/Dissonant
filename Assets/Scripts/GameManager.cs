@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     [Header("PauseMenu")]
     public CanvasGroup pauseMenu;
 
+    public FPSController fpsController;
+
     //Alamcena el esatdo actual del juego
     public GameState currentState;
     //Almacena el estado previo del juego
@@ -84,7 +86,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
         //activa la pantalla de pausa
         pauseMenu.alpha = 1f;
-
+        fpsController.sensitivity = 0f;
         //hacemos visible el cursor
         Cursor.visible = true;
         //desbloqueamos el cursor
@@ -105,7 +107,7 @@ public class GameManager : MonoBehaviour
 
         // desactiva la pantalla de pausa
         pauseMenu.alpha = 0f;
-
+        fpsController.sensitivity = 2f;
         //ocultamos el cursor
         Cursor.visible = false;
         //bloqueamos el cursor
