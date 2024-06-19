@@ -39,6 +39,8 @@
 		<string name="final_scene_text_1">Me ha gustado la compañía de este Astronauta.</string>
 		<string name="final_scene_text_2">Volveré a dejar los objetos disonantes en otros mundos.</string>
 		<string name="final_scene_text_3">Asín los de la Tierra me traerán un nuevo Astronauta.</string>
+    <string name="try_drop_first_dissonat_object">Coloca aquí el objeto disonante de Amateratsu.</string>
+    <string name="try_drop_second_dissonat_object">Coloca aquí el objeto disonante de Blossom.</string>
 		
 		
 
@@ -63,5 +65,16 @@
 		<string name="description_achievement_plant">Interactua con 10 plantas de Blossom</string>
 		<string name="name_achievement_portal">Viaje Dimensional</string>
 		<string name="description_achievement_portal">Atraviesa los portales 6 veces</string>
+  
+
+  <string name="prop_gameboy_1">¿Sientes nostalgia?</string>
+  <string name="prop_gameboy_2">El antiguo astronauta estuvo mucho tiempo con esa chatarra.</string>
+  <string name="prop_mario_1">Esto lo encontramos en un tal Reino champiñón.</string>
+  <string name="prop_mario_2">¡No te lo comas!</string>
+    <string name="prop_laser_1">¡No la toques! Es una espada láser.</string>
+  <string name="prop_laser_2">Puedes causar un desastre.</string>
+   <string name="prop_ball">Se dice que si reúnes 7 bolas aparece un dragón que te concede un deseo.</string>
+  <string name="prop_fruit_1">Si te la comes obtendrás un gran poder.</string>
+  <string name="prop_fruit_2">Pero ya no podrás nadar en el agua.</string>
 	</lang>
 </main>

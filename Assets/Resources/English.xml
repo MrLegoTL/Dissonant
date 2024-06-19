@@ -39,6 +39,8 @@
 		<string name="final_scene_text_1">I enjoyed the company of this Astronaut.</string>
 		<string name="final_scene_text_2">I will return to leave the dissonant objects in other worlds.</string>
 		<string name="final_scene_text_3">So Earth will bring me a new Astronaut.</string>
+    <string name="try_drop_first_dissonat_object">Place here the dissonant object of Amateratsu.</string>
+    <string name="try_drop_second_dissonat_object">Place here the dissonant object of Blossom.</string>
 
 		<string name="option">Options</string>
 		<string name="music">Music</string>
@@ -60,6 +62,17 @@
 		<string name="description_achievement_plant">Interact with 10 Blossom plants</string>
 		<string name="name_achievement_portal">Dimensional Travel</string>
 		<string name="description_achievement_portal">Pass through the portals 6 times</string>
+
+
+    <string name="prop_gameboy_1">Feeling nostalgic?</string>
+    <string name="prop_gameboy_2">The former astronaut spent a lot of time with that junk.</string>
+    <string name="prop_mario_1">This is found in a certain Mushroom Kingdom.</string>
+    <string name="prop_mario_2">Don't eat it!</string>
+    <string name="prop_laser_1">Don't touch it! It's a laser sword.</string>
+    <string name="prop_laser_2">You can cause a disaster.</string>
+    <string name="prop_ball">It is said that if you collect 7 balls, a dragon appears and grants you a wish.</string>
+    <string name="prop_fruit_1">If you eat it you will obtain great power.</string>
+    <string name="prop_fruit_2">But you will no longer be able to swim in the water.</string>
 	
 	</lang>
 </main>
