@@ -33,5 +33,18 @@
     <string name="dissonant_zone_2">This is where you should place the dissonant objects, once you have found them.</string>
     <string name="dropout_second_dissonant_object_1">Great! You have brought back all the dissonant objects.</string>
     <string name="dropout_second_dissonant_object_2">Come here to talk to me to finish the mission.</string>
+
+		<string name="option">Options</string>
+		<string name="music">Music</string>
+		<string name="sounds">Sounds FX</string>
+		<string name="achievement">Achievements</string>
+		<string name="language">Language</string>
+		<string name="play">Start Game</string>
+		<string name="exit">Exit</string>
+		<string name="back">Back</string>
+		<string name="pause">Pause</string>
+		<string name="resume">Resume</string>
+		<string name="restart">Restart</string>
+		<string name="mainmenu">Main Menu</string>
 	</lang>
 </main>

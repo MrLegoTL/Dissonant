@@ -5,6 +5,7 @@ using UnityEngine;
 using System.Xml;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class TranslateManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class TranslateManager : MonoBehaviour
     //listado de items tipo array, que permite indices alfanumericos
     public Dictionary<string, string> strings;
 
+    public static Action onChangeLanguage;
     public static TranslateManager instance;
     
 
@@ -114,12 +116,14 @@ public class TranslateManager : MonoBehaviour
     /// Método que cambia el idioma basado en la opción seleccionada en el menú desplegable.
     /// </summary>
     /// <param name="dropdown"></param>
-    public void OnLanguageChange(TMP_Dropdown dropdown)
+    public void OnLanguageChange(string selectedLanguage)
     {
-        string selectedLanguage = dropdown.options[dropdown.value].text;
+        //string selectedLanguage = dropdown.options[dropdown.value].text;
         LoadLanguage(selectedLanguage);
         defaultLanguage = selectedLanguage;
         Debug.Log(selectedLanguage);
-
+        onChangeLanguage?.Invoke();
     }
+
+
 }
