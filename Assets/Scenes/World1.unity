@@ -20571,6 +20571,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3976889184522117098, guid: 7070af19f92937b4f9370e350eb6cd96, type: 3}
+      propertyPath: stepSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3cd391e97311d8341b4d3c013a0c28ef, type: 3}
+    - target: {fileID: 3976889184522117098, guid: 7070af19f92937b4f9370e350eb6cd96, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1613200279}
     - target: {fileID: 4208836680794030880, guid: 7070af19f92937b4f9370e350eb6cd96, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -37079,6 +37087,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1612750303}
   m_Mesh: {fileID: -803794925337273111, guid: f19f9c2a09b8b6c45a092e6288ff9198, type: 3}
+--- !u!82 &1613200279 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5730091907774109150, guid: 7070af19f92937b4f9370e350eb6cd96, type: 3}
+  m_PrefabInstance: {fileID: 912096790}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1629109077
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class AchievementUI : MonoBehaviour
     public Animator animator;
     public float delayAchievement = 3f;
     private float lastAchievementTime;
+    
 
     private void OnEnable()
     {
@@ -52,12 +53,13 @@ public class AchievementUI : MonoBehaviour
     /// <returns></returns>
     private IEnumerator DelayShow(string name, string imageName, float showTime)
     {
+        
         while (Time.time < showTime)
         {
             yield return null;
         }
 
-        nameUI.text = name;
+        nameUI.text = TranslateManager.instance.GetString(name);
         imageUI.sprite = Resources.Load<Sprite>("AchievementSprites/" + imageName);
         animator.SetTrigger("Show");
     }

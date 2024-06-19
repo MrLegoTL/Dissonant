@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ChangeSceneController : MonoBehaviour
 {
-
+    public string sceneName;
     public static ChangeSceneController instance;
 
     private void Awake()
@@ -22,7 +22,8 @@ public class ChangeSceneController : MonoBehaviour
         //para asegurarnos que no se realicewn cambios
         Time.timeScale = 1;
         //cambiamos a la escena especificada
-        SceneManager.LoadScene(nextScene);
+        //SceneManager.LoadScene(nextScene);
+        SceneController.instance.FadeAndLoadScene(sceneName);
         SoundManager.instance.PlayGame();
 
     }

@@ -33,6 +33,14 @@
     <string name="dissonant_zone_2">Aquí es donde se debe colocar los objetos disonantes, una vez los hayas encontrados.</string>
     <string name="dropout_second_dissonant_object_1">¡Estupendo! Has traido de vuelta todos los objetos disonantes.</string>
     <string name="dropout_second_dissonant_object_2">Ven aqui a hablar conmigo para finalizar la misión.</string>
+		<string name="final_dron_1">Lo lograste Astronauta 3008. Has completado la misión con éxito.</string>
+		<string name="final_dron_2">Contactaré con la Tierra para comunicarles que la misión ha sido completada.</string>
+		<string name="final_dron_3">Ya puedes volver a tu hogar. Gracias por tus servicios Astronauta 3008.</string>
+		<string name="final_scene_text_1">Me ha gustado la compañía de este Astronauta.</string>
+		<string name="final_scene_text_2">Volveré a dejar los objetos disonantes en otros mundos.</string>
+		<string name="final_scene_text_3">Asín los de la Tierra me traerán un nuevo Astronauta.</string>
+		
+		
 
 		<string name="option">Opciones</string>
 		<string name="music">Música</string>
@@ -46,5 +54,14 @@
 		<string name="resume">Reanudar</string>
 		<string name="restart">Reiniciar</string>
 		<string name="mainmenu">Menu Principal</string>
+
+
+
+		<string name="name_achievement_dron">Dron</string>
+		<string name="description_achievement_dron">Habla con el Dron 3 veces</string>
+		<string name="name_achievement_plant">Botánico</string>
+		<string name="description_achievement_plant">Interactua con 10 plantas de Blossom</string>
+		<string name="name_achievement_portal">Viaje Dimensional</string>
+		<string name="description_achievement_portal">Atraviesa los portales 6 veces</string>
 	</lang>
 </main>

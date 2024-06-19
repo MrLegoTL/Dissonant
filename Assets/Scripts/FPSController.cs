@@ -55,6 +55,16 @@ public class FPSController : MonoBehaviour
     public Image spot;
     public Image hand;
 
+    [Header("StepsSounds")]
+    //distancia que debera recorrer para que suene una pisada
+    public float stepDistance = 2f;
+    //clip de sonido para los pasos
+    public AudioClip stepSound;
+    //contador de distancia para controlar cuando recorre la distancia necesaria para reproducir el sonido de paso
+    private float stepDistanceCounter = 0f;
+    //referencia al audiosource
+    public AudioSource audioSource;
+
     public GameObject handObject;
     public string handObjectName;
 
@@ -150,6 +160,18 @@ public class FPSController : MonoBehaviour
         //le indicamos al character controller, que realizaremos un desplazamiento, indicando el vector de direccion
         //multiplicado por la velocidad y por el delta time
         player.Move(movement * speed * Time.deltaTime);
+
+        stepDistanceCounter += movement.magnitude * speed * Time.deltaTime;
+        //si hemos recorrido la distancia configurada para reproducir el sonido de paso
+        if (stepDistanceCounter >= stepDistance)
+        {
+            //reiniciamos el contador
+            stepDistanceCounter = 0f;
+            //hacemos que el pitch sea aleatorio para romper la monotonía
+            audioSource.pitch = UnityEngine.Random.Range(0.7f, 0.9f);
+
+            audioSource.PlayOneShot(stepSound);
+        }
     }
 
     /// <summary>

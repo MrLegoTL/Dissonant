@@ -360,6 +360,7 @@ GameObject:
   - component: {fileID: 6146516037875993105}
   - component: {fileID: 134986233620657150}
   - component: {fileID: 1983611114040796463}
+  - component: {fileID: 2468127486557987904}
   m_Layer: 5
   m_Name: DropdownLanguage
   m_TagString: Untagged
@@ -484,8 +485,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 7b9de8a991a2c6846a77bb5abbabc5a7, type: 2}
-        m_TargetAssemblyTypeName: TranslateButton, Assembly-CSharp
+      - m_Target: {fileID: 2468127486557987904}
+        m_TargetAssemblyTypeName: DropDownManager, Assembly-CSharp
         m_MethodName: ChangeLanguages
         m_Mode: 0
         m_Arguments:
@@ -497,6 +498,20 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_AlphaFadeSpeed: 0.15
+--- !u!114 &2468127486557987904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945221440579054127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44eaf304e698e1c49a24454b313e2b1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spanish: Spanish
+  english: English
 --- !u!1 &955880190771592365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1401,8 +1416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
-  spanishText: "M\xFAsica"
-  englishText: Music
+  textKey: music
 --- !u!1 &2017548382754312591
 GameObject:
   m_ObjectHideFlags: 0
@@ -1628,8 +1642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
-  spanishText: Pausa
-  englishText: Pause
+  textKey: pause
 --- !u!1 &2256824361605902862
 GameObject:
   m_ObjectHideFlags: 0
@@ -1778,8 +1791,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
-  spanishText: Opciones
-  englishText: Options
+  textKey: option
 --- !u!1 &2349105470048464969
 GameObject:
   m_ObjectHideFlags: 0
@@ -2315,6 +2327,7 @@ GameObject:
   - component: {fileID: 646011514188309395}
   - component: {fileID: 8394658365656522790}
   - component: {fileID: 3976889184522117098}
+  - component: {fileID: 5730091907774109150}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2393,8 +2406,107 @@ MonoBehaviour:
   handToObject: {fileID: 5756826207696999187}
   spot: {fileID: 1984050073580316664}
   hand: {fileID: 8670324551632768008}
+  stepDistance: 2
+  stepSound: {fileID: 0}
+  audioSource: {fileID: 0}
   handObject: {fileID: 0}
   handObjectName: 
+--- !u!82 &5730091907774109150
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2886391302089870451}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -7486582060495574479, guid: 43d1d69edf21145408cd36781639fc04, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2994452636384967931
 GameObject:
   m_ObjectHideFlags: 0
@@ -2543,8 +2655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
-  spanishText: Volver al Menu
-  englishText: Main Menu
+  textKey: mainmenu
 --- !u!1 &3203749494590009228
 GameObject:
   m_ObjectHideFlags: 0
@@ -2768,8 +2879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
-  spanishText: Opciones
-  englishText: Options
+  textKey: option
 --- !u!1 &3330909893599983603
 GameObject:
   m_ObjectHideFlags: 0
@@ -3995,8 +4105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
-  spanishText: Sonidos FX
-  englishText: Sounds FX
+  textKey: sounds
 --- !u!1 &5685006552621461513
 GameObject:
   m_ObjectHideFlags: 0
@@ -4307,8 +4416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
-  spanishText: Reanudar
-  englishText: Resume
+  textKey: resume
 --- !u!1 &6457226815025358847
 GameObject:
   m_ObjectHideFlags: 0
@@ -4881,8 +4989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
-  spanishText: Reiniciar
-  englishText: Restart
+  textKey: restart
 --- !u!1 &7114715806147919971
 GameObject:
   m_ObjectHideFlags: 0
@@ -5114,8 +5221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
-  spanishText: Idioma
-  englishText: Language
+  textKey: language
 --- !u!1 &7462942072999889776
 GameObject:
   m_ObjectHideFlags: 0
@@ -5376,8 +5482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
-  spanishText: Volver
-  englishText: Back
+  textKey: back
 --- !u!1 &8048806528686503512
 GameObject:
   m_ObjectHideFlags: 0
