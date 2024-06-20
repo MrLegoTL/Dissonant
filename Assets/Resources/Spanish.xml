@@ -84,5 +84,8 @@
    <string name="prop_ball">Se dice que si reúnes 7 bolas aparece un dragón que te concede un deseo.</string>
   <string name="prop_fruit_1">Si te la comes obtendrás un gran poder.</string>
   <string name="prop_fruit_2">Pero ya no podrás nadar en el agua.</string>
+
+
+		<string name="video_inicio">Hola, Bienvenido a Dissonant.</string>
 	</lang>
 </main>
