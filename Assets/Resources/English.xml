@@ -54,6 +54,8 @@
 		<string name="resume">Resume</string>
 		<string name="restart">Restart</string>
 		<string name="mainmenu">Main Menu</string>
+		<string name="delete">Delete Data</string>
+		<string name="delete_button">Delete</string>
 
 
 		<string name="name_achievement_dron">Drone</string>
@@ -62,6 +64,12 @@
 		<string name="description_achievement_plant">Interact with 10 Blossom plants</string>
 		<string name="name_achievement_portal">Dimensional Travel</string>
 		<string name="description_achievement_portal">Pass through the portals 6 times</string>
+		<string name="name_achievement_prop">Curious</string>
+		<string name="description_achievement_prop">Interacts with 5 base objects</string>
+		<string name="name_achievement_runner">Speed Runner</string>
+		<string name="description_achievement_runner">Pass the game in less than 5 minutes</string>
+		<string name="name_achievement_fix">Chaos Restored</string>
+		<string name="description_achievement_fix">Complete the mission</string>
 
 
     <string name="prop_gameboy_1">Feeling nostalgic?</string>

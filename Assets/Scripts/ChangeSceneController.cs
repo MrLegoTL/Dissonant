@@ -23,7 +23,7 @@ public class ChangeSceneController : MonoBehaviour
         Time.timeScale = 1;
         //cambiamos a la escena especificada
         //SceneManager.LoadScene(nextScene);
-        SceneController.instance.FadeAndLoadScene(sceneName);
+        SceneController.instance.FadeAndLoadScene(nextScene);
         SoundManager.instance.PlayGame();
 
     }

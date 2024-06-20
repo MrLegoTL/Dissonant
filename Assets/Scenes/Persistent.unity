@@ -288,6 +288,12 @@ MonoBehaviour:
       value: 0
     - code: portal
       value: 0
+    - code: prop
+      value: 0
+    - code: runner
+      value: 0
+    - code: fix
+      value: 0
     achievements:
     - name: name_achievement_dron
       statCode: dron
@@ -306,6 +312,24 @@ MonoBehaviour:
       imageName: Portal2
       description: Atraviesa los portales 6 veces
       targetAmount: 6
+      unlocked: 0
+    - name: name_achievement_prop
+      statCode: prop
+      imageName: Interact
+      description: Interactua con 5 objetos de la base
+      targetAmount: 5
+      unlocked: 0
+    - name: name_achievement_runner
+      statCode: runner
+      imageName: Runner
+      description: Pasate el juego en menos de 5 minutos
+      targetAmount: 1
+      unlocked: 0
+    - name: name_achievement_fix
+      statCode: fix
+      imageName: Fix
+      description: "Completa la misi\xF3n"
+      targetAmount: 1
       unlocked: 0
     objectStates:
     - objectName: RedCrystal
@@ -330,6 +354,8 @@ MonoBehaviour:
       picked: 0
   playerPosition: InitialPosition
   objectInHandName: 
+  startedTime: 0
+  timeCounter: 0
   objects:
   - {fileID: 7901038046059384752, guid: 01668cf32b82ab8439ad509bf37f27dd, type: 3}
   - {fileID: 656813320180579026, guid: 1ea621fccdf9ea04e8a4fb6be273cfff, type: 3}

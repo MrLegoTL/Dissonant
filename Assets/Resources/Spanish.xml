@@ -56,6 +56,8 @@
 		<string name="resume">Reanudar</string>
 		<string name="restart">Reiniciar</string>
 		<string name="mainmenu">Menu Principal</string>
+		<string name="delete">Borrar Datos</string>
+		<string name="delete_button">Borrar</string>
 
 
 
@@ -65,6 +67,12 @@
 		<string name="description_achievement_plant">Interactua con 10 plantas de Blossom</string>
 		<string name="name_achievement_portal">Viaje Dimensional</string>
 		<string name="description_achievement_portal">Atraviesa los portales 6 veces</string>
+		<string name="name_achievement_prop">Curioso</string>
+		<string name="description_achievement_prop">Interactua con 5 objetos de la base </string>
+		<string name="name_achievement_runner">Speed Runner</string>
+		<string name="description_achievement_runner">Pasate el juego en menos de 5 minutos</string>
+		<string name="name_achievement_fix">Caos Restaurado</string>
+		<string name="description_achievement_fix">Completa la misión</string>
   
 
   <string name="prop_gameboy_1">¿Sientes nostalgia?</string>

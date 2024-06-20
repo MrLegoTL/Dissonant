@@ -15,6 +15,8 @@ public class DataManager : MonoBehaviour
     public Data data;
     public string playerPosition = "InitialPosition";
     public string objectInHandName;
+    public bool startedTime = false;
+    public float timeCounter = 0f;
     
     public GameObject[] objects;
     public string fileName = "data.dat";
@@ -28,6 +30,9 @@ public class DataManager : MonoBehaviour
     public static Action onInteractDron;
     public static Action onInteractPlants;
     public static Action onDimensionTravel;
+    public static Action onInteractProp;
+    public static Action onSpeedRunner;
+    public static Action onChaosFix;
     //singleton
     public static DataManager instance;
 
@@ -61,6 +66,14 @@ public class DataManager : MonoBehaviour
     void Start()
     {
         player  =FindObjectOfType<FPSController>();
+    }
+
+    private void Update()
+    {
+        if (startedTime)
+        {
+            TimeCounter();
+        }
     }
 
     /// <summary>
@@ -220,6 +233,11 @@ public class DataManager : MonoBehaviour
             //si no existe la condicion, devolvemos un flase
             return false;
         }
+    }
+
+    public void TimeCounter()
+    {
+        timeCounter += Time.deltaTime;
     }
 
     

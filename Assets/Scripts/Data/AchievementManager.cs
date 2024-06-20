@@ -20,6 +20,9 @@ public class AchievementManager : MonoBehaviour
         DataManager.onInteractDron += () => IncreaseStatAndCheckAchiviement("dron", 1);
         DataManager.onInteractPlants += () => IncreaseStatAndCheckAchiviement("plant", 1);
         DataManager.onDimensionTravel += () => IncreaseStatAndCheckAchiviement("portal", 1);
+        DataManager.onInteractProp += () => IncreaseStatAndCheckAchiviement("prop", 1);
+        DataManager.onSpeedRunner += () => IncreaseStatAndCheckAchiviement("runner", 1);
+        DataManager.onChaosFix += () => IncreaseStatAndCheckAchiviement("fix", 1);
     }
 
     /// <summary>

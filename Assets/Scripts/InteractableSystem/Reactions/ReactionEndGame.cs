@@ -24,9 +24,12 @@ public class ReactionEndGame : Reaction
     {
         // Fundido a blanco
         yield return StartCoroutine(FadeIn(whiteImage));
-
-        // Mostrar la nueva imagen
-        yield return StartCoroutine(FadeIn(newImage));
+        if(newImage!= null)
+        {
+            // Mostrar la nueva imagen
+            yield return StartCoroutine(FadeIn(newImage));
+        }
+        
 
         // Mantener la nueva imagen visible por un tiempo
         yield return new WaitForSeconds(displayDuration);
